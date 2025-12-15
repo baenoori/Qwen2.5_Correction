@@ -4,7 +4,7 @@
   "source_file": "vanilla_0.5B_hard_w_noerror.json",
   "metrics": {
     "total_items": 12,
-    "type_accuracy": null,
+    "type_accuracy": 0,
     "detection_accuracy": 0,
     "average_qualitative_scores": {
       "error_removal_score": 0.0,
