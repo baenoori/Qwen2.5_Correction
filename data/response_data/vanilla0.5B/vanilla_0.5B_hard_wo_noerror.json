@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 2,
+    "pred_error_type_2_name": "Unit/Measurement Mismatch",
+    "sentence": "The department published a short summary of the survey. It said there were 40 respondents in total. It also stated that 22 responded online and 20 responded in person. The same summary claimed the survey ended on March 5 and began on March 10. No other details were unusual.",
+    "pred_correction": "The warehouse report says inventory totals 500 items: 280 in section A and 250 in section B. It also notes the storage temperature is maintained at 15 kilometers.",
+    "explanation": "There is an arithmetic inconsistency where the sum of items in sections A and B does not equal the total inventory of 500 items."
+  },
+  {
+    "id": 2,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 2,
+    "pred_error_type_2_name": "Unit/Measurement Mismatch",
+    "sentence": "The event guide explains where to find the workshop room. It says the room is inside City Mall on the second floor. It also says the same room is across the street from City Mall next to the bus stop. The guide lists the room’s height as 30 liters. Everything else looks like a normal 안내문.",
+    "pred_correction": "The warehouse report says inventory totals 530 items: 280 in section A and 250 in section B. It also notes the storage temperature is maintained at 15 degrees Celsius.",
+    "explanation": "The first error is arithmetic inconsistency due to incorrect unit conversion. The correct value should be 530 instead of 500."
+  },
+  {
+    "id": 3,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 2,
+    "pred_error_type_2_name": "Unit/Measurement Mismatch",
+    "sentence": "The biography describes Hana’s education and work history. It says she completed her undergraduate degree in 2021. It also says she joined the company as a full-time analyst in 2023. The bio adds that after graduation, she started her first job at the same company. The rest of the paragraph is consistent.",
+    "pred_correction": "The biography describes Hana’s education and work history. It says she completed her undergraduate degree in 2021. It also says she joined the company as a full-time analyst in 2023. The bio adds that after graduation, she started her first job at the same company. The rest of the paragraph is consistent.",
+    "explanation": "The sentence has arithmetic inconsistency due to incorrect addition of numbers and temporal inconsistency due to contradictory events."
+  },
+  {
+    "id": 4,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 2,
+    "pred_error_type_2_name": "Unit/Measurement Mismatch",
+    "sentence": "The building notice describes the parking facility. It says the lot has 60 spaces in total. It also says 35 spaces are covered and 30 spaces are uncovered. The notice states the parking lot is under the building, but also on the rooftop of the building. All other information seems ordinary.",
+    "pred_correction": "The building notice describes the parking facility. It says the lot has 60 spaces in total. It also says 35 spaces are covered and 30 spaces are uncovered. The notice states the parking lot is on the rooftop, but all other information seems ordinary.",
+    "explanation": "Numbers don't add up correctly, and the parking lot is on the rooftop."
+  },
+  {
+    "id": 5,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 1,
+    "pred_error_type_2_name": "Arithmetic/Total Inconsistency",
+    "sentence": "Olivia led the meeting and presented the weekly plan. Everyone asked questions and Olivia answered them clearly. After the meeting, he sent the summary email to the team. The minutes also stated that the projector apologized for the delay. The rest of the notes look normal.",
+    "pred_correction": "The warehouse report says inventory totals 530 items: 280 in section A and 250 in section B. It also notes the storage temperature is maintained at 15 degrees Celsius.",
+    "explanation": "Numbers don't add up correctly, and events in impossible chronological order."
+  },
+  {
+    "id": 6,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 1,
+    "pred_error_type_2_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The lab note describes a quick protocol change. It says the sample should be incubated at 5 meters. It also states that the centrifuge decided to stop early. The note continues with routine cleanup instructions. Nothing else is contradictory.",
+    "pred_correction": "The lab note describes a quick protocol change. It says the sample should be incubated at 5 centimeters. It also states that the centrifuge decided to stop early. The note continues with routine cleanup instructions. Nothing else is contradictory.",
+    "explanation": "The lab note uses incorrect unit for incubation time (meters instead of centimeters). The centrifuge decision to stop early contradicts the lab's protocol."
+  },
+  {
+    "id": 7,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 1,
+    "pred_error_type_2_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The team circulated a short report about this month’s registrations. It said there were 95 registrations in total. It also said 55 were for the morning session and 40 were for the afternoon session. The report stated that each person chose exactly one session. It then claimed the registration period opened on June 1 and closed on June 10. The rest of the email was ordinary.",
+    "pred_correction": "The warehouse report says inventory totals 530 items: 280 in section A and 250 in section B. It also notes the storage temperature is maintained at 15 degrees Celsius.",
+    "explanation": "There are arithmetic inconsistencies due to incorrect addition and unit mismatch between numbers and temperatures."
+  },
+  {
+    "id": 8,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 1,
+    "pred_error_type_2_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The brochure describes a small exhibition space for visitors. It says the gallery is inside the museum, past the main lobby on the first floor. A later sentence says the same gallery is outside the museum building across the street. The brochure lists the ceiling height as 12 kilograms. It also mentions that photography is allowed without flash. It ends with the ticket counter hours and a contact number.",
+    "pred_correction": "The brochure incorrectly states the gallery is inside the museum instead of past the main lobby on the first floor. It now correctly lists the gallery as being outside the museum building across the street.",
+    "explanation": "The brochure incorrectly states the gallery is inside the museum instead of past the main lobby on the first floor."
+  },
+  {
+    "id": 9,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 1,
+    "pred_error_type_2_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The profile introduces Joon as a new hire and summarizes his background. It says he started his first full-time job in 2020. It also says he finished university in 2022. The profile frames the job as his first role after graduation. In the next sentence, it says that after graduation, she moved to the company’s headquarters. The rest of the page contains no other dates or names.",
+    "pred_correction": "The profile introduces Joon as a new hire and summarizes his background. It says he started his first full-time job in 2020. It also says he finished university in 2022. The profile frames the job as his first role after graduation. In the next sentence, it says that after graduation, she moved to the company's headquarters. The rest of the page contains no other dates or names.",
+    "explanation": "The sentence has arithmetic inconsistency due to incorrect addition of numbers and temporal inconsistency due to contradictory time references."
+  },
+  {
+    "id": 10,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 1,
+    "pred_error_type_2_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The campus notice provides directions to the counseling center. It says the office is on the third floor of the main building near the east stairs. Another line says the same office is in the basement of the main building next to the storage room. The notice also states there are 25 appointment slots per day. It then says 15 slots are for walk-ins and 15 slots are for scheduled visits. The rest of the notice explains how to contact staff.",
+    "pred_correction": "The warehouse report says inventory totals 530 items: 280 in section A and 250 in section B. It also notes the storage temperature is maintained at 15 kilometers.",
+    "explanation": "The first error occurs because the total number of items does not add up correctly. The correct total should be 280 + 250 = 530 instead of 500."
+  },
+  {
+    "id": 11,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 1,
+    "pred_error_type_2_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The meeting recap describes how Mina organized the rollout plan. Mina introduced the schedule and assigned tasks to each teammate. Several people thanked Mina for clarifying priorities. After the meeting, she uploaded the finalized document to the shared drive. The recap also stated that the coordinator promised to handle follow-up questions from stakeholders. The rest of the recap contains normal action items and deadlines.",
+    "pred_correction": "The meeting recap describes how Mina organized the rollout plan. Mina introduced the schedule and assigned tasks to each teammate. Several people thanked Mina for clarifying priorities. After the meeting, she uploaded the finalized document to the shared drive. The recap also stated that the coordinator promised to handle follow-up questions from stakeholders. The rest of the recap contains normal action items and deadlines.",
+    "explanation": "The sentence has arithmetic inconsistency due to incorrect addition of numbers and temporal inconsistency due to conflicting locations."
+  },
+  {
+    "id": 12,
+    "pred_error_type_1": 1,
+    "pred_error_type_1_name": "Arithmetic/Total Inconsistency",
+    "pred_error_type_2": 1,
+    "pred_error_type_2_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The operations log summarizes a minor incident during shipping. It says workers sorted parcels and updated the tracking dashboard. It then states that the barcode called the supervisor to request more staff. The log also records that the conveyor speed was set to 4 liters. It continues by noting that the delay was resolved and deliveries returned to normal. Aside from those statements, the log reads like a standard report.",
+    "pred_correction": "The operations log summarizes a minor incident during shipping. It says workers sorted parcels and updated the tracking dashboard. It then states that the barcode called the supervisor to request more staff. The log also records that the conveyor speed was set to 4 liters. It continues by noting that the delay was resolved and deliveries returned to normal. Aside from those statements, the log reads like a standard report.",
+    "explanation": "The sentence has arithmetic inconsistency due to incorrect addition of numbers and temporal inconsistency due to conflicting events."
+  }
+]

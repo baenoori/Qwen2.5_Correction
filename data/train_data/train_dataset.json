@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "has_error": true,
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The report lists 100 items: 60 were approved and 50 were rejected.",
+    "ground_truth": "The report lists 110 items: 60 were approved and 50 were rejected."
+  },
+  {
+    "id": 2,
+    "has_error": true,
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The charity raised $10,000: $6,000 online and $5,000 offline.",
+    "ground_truth": "The charity raised $11,000: $6,000 online and $5,000 offline."
+  },
+  {
+    "id": 3,
+    "has_error": true,
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The playlist has 25 songs: 14 are pop and 13 are rock.",
+    "ground_truth": "The playlist has 27 songs: 14 are pop and 13 are rock."
+  },
+  {
+    "id": 4,
+    "has_error": true,
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The box contains 40 screws: 18 are long and 25 are short.",
+    "ground_truth": "The box contains 43 screws: 18 are long and 25 are short."
+  },
+  {
+    "id": 5,
+    "has_error": true,
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The survey had 300 responses: 160 were satisfied and 170 were unsatisfied.",
+    "ground_truth": "The survey had 330 responses: 160 were satisfied and 170 were unsatisfied."
+  },
+  {
+    "id": 6,
+    "has_error": true,
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The library bought 120 books: 70 were fiction and 60 were non-fiction.",
+    "ground_truth": "The library bought 130 books: 70 were fiction and 60 were non-fiction."
+  },
+  {
+    "id": 7,
+    "has_error": true,
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The bus carried 55 passengers: 30 were seated and 28 were standing.",
+    "ground_truth": "The bus carried 58 passengers: 30 were seated and 28 were standing."
+  },
+  {
+    "id": 8,
+    "has_error": true,
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The team won 12 games: 8 at home and 6 away.",
+    "ground_truth": "The team won 14 games: 8 at home and 6 away."
+  },
+  {
+    "id": 9,
+    "has_error": true,
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The budget is $2.0 million: $1.3 million for salaries and $0.8 million for equipment.",
+    "ground_truth": "The budget is $2.1 million: $1.3 million for salaries and $0.8 million for equipment."
+  },
+  {
+    "id": 10,
+    "has_error": true,
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "She is 165 liters tall.",
+    "ground_truth": "She is 165 cm tall."
+  },
+  {
+    "id": 11,
+    "has_error": true,
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The marathon is 42 kilograms long.",
+    "ground_truth": "The marathon is 42 kilometers long."
+  },
+  {
+    "id": 12,
+    "has_error": true,
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The laptop weighs 1.5 centimeters.",
+    "ground_truth": "The laptop weighs 1.5 kilograms."
+  },
+  {
+    "id": 13,
+    "has_error": true,
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The room is 30°C wide.",
+    "ground_truth": "The room is 30 meters wide."
+  },
+  {
+    "id": 14,
+    "has_error": true,
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The tank holds 50 meters of fuel.",
+    "ground_truth": "The tank holds 50 liters of fuel."
+  },
+  {
+    "id": 15,
+    "has_error": true,
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "He ran 5 kilograms this morning.",
+    "ground_truth": "He ran 5 kilometers this morning."
+  },
+  {
+    "id": 16,
+    "has_error": true,
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The file size is 20 minutes.",
+    "ground_truth": "The file size is 20 megabytes."
+  },
+  {
+    "id": 17,
+    "has_error": true,
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The medicine dose is 10 kilometers.",
+    "ground_truth": "The medicine dose is 10 milligrams."
+  },
+  {
+    "id": 18,
+    "has_error": true,
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The building is 200 watts tall.",
+    "ground_truth": "The building is 200 meters tall."
+  },
+  {
+    "id": 19,
+    "has_error": true,
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "He retired in 2016 and started his first job in 2019.",
+    "ground_truth": "He started his first job in 2016 and retired in 2019."
+  },
+  {
+    "id": 20,
+    "has_error": true,
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "The seminar ended on August 2 and began on August 5.",
+    "ground_truth": "The seminar began on August 2 and ended on August 5."
+  },
+  {
+    "id": 21,
+    "has_error": true,
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "She published her first book in 2021 and learned to read in 2024.",
+    "ground_truth": "She learned to read in 2021 and published her first book in 2024."
+  },
+  {
+    "id": 22,
+    "has_error": true,
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "The app update was released in May, and the bug it fixed was discovered in July.",
+    "ground_truth": "The bug was discovered in May, and the update was released in July."
+  },
+  {
+    "id": 23,
+    "has_error": true,
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "He submitted the form on Monday and filled it out on Wednesday.",
+    "ground_truth": "He filled out the form on Monday and submitted it on Wednesday."
+  },
+  {
+    "id": 24,
+    "has_error": true,
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "The concert finished at 9:00 PM and started at 10:30 PM.",
+    "ground_truth": "The concert started at 9:00 PM and finished at 10:30 PM."
+  },
+  {
+    "id": 25,
+    "has_error": true,
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "She arrived at the airport at 3:00 PM and took off at 1:00 PM.",
+    "ground_truth": "She arrived at the airport at 1:00 PM and took off at 3:00 PM."
+  },
+  {
+    "id": 26,
+    "has_error": true,
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "He graduated high school in 2015 and entered high school in 2017.",
+    "ground_truth": "He entered high school in 2015 and graduated in 2017."
+  },
+  {
+    "id": 27,
+    "has_error": true,
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency",
+    "sentence": "The statue is in front of the museum, but it is also behind the museum.",
+    "ground_truth": "The statue is in front of the museum."
+  },
+  {
+    "id": 28,
+    "has_error": true,
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency",
+    "sentence": "The elevator is above the lobby, but it is also below the lobby.",
+    "ground_truth": "The elevator is above the lobby."
+  },
+  {
+    "id": 29,
+    "has_error": true,
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency",
+    "sentence": "The parking garage is under the building, but it is also on the top floor of the building.",
+    "ground_truth": "The parking garage is under the building."
+  },
+  {
+    "id": 30,
+    "has_error": true,
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency",
+    "sentence": "The cafe is east of the river, but it is also west of the river.",
+    "ground_truth": "The cafe is east of the river."
+  },
+  {
+    "id": 31,
+    "has_error": true,
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency",
+    "sentence": "The bookstore is inside the airport terminal, but it is also outside the airport gates.",
+    "ground_truth": "The bookstore is inside the airport terminal."
+  },
+  {
+    "id": 32,
+    "has_error": true,
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency",
+    "sentence": "The meeting room is on the 5th floor, but it is also in the basement.",
+    "ground_truth": "The meeting room is on the 5th floor."
+  },
+  {
+    "id": 33,
+    "has_error": true,
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency",
+    "sentence": "The bus stop is next to the school, but it is also 15 km away from the school.",
+    "ground_truth": "The bus stop is 15 km away from the school."
+  },
+  {
+    "id": 34,
+    "has_error": true,
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency",
+    "sentence": "The clinic is north of City Hall, but it is also south of City Hall.",
+    "ground_truth": "The clinic is north of City Hall."
+  },
+  {
+    "id": 35,
+    "has_error": true,
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity",
+    "sentence": "Jessica blamed himself for the mistake.",
+    "ground_truth": "Jessica blamed herself for the mistake."
+  },
+  {
+    "id": 36,
+    "has_error": true,
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity",
+    "sentence": "Michael introduced herself to the new team.",
+    "ground_truth": "Michael introduced himself to the new team."
+  },
+  {
+    "id": 37,
+    "has_error": true,
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity",
+    "sentence": "Sofia congratulated himself on the promotion.",
+    "ground_truth": "Sofia congratulated herself on the promotion."
+  },
+  {
+    "id": 38,
+    "has_error": true,
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity",
+    "sentence": "Daniel reminded herself to lock the door.",
+    "ground_truth": "Daniel reminded himself to lock the door."
+  },
+  {
+    "id": 39,
+    "has_error": true,
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity",
+    "sentence": "Hannah said he would send the invoice today.",
+    "ground_truth": "Hannah said she would send the invoice today."
+  },
+  {
+    "id": 40,
+    "has_error": true,
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity",
+    "sentence": "Kevin told everyone that she would lead the session.",
+    "ground_truth": "Kevin told everyone that he would lead the session."
+  },
+  {
+    "id": 41,
+    "has_error": true,
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity",
+    "sentence": "Mina described himself as the team lead.",
+    "ground_truth": "Mina described herself as the team lead."
+  },
+  {
+    "id": 42,
+    "has_error": true,
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity",
+    "sentence": "Alex prepared the slides, and herself presented them to the client.",
+    "ground_truth": "Alex prepared the slides, and himself presented them to the client."
+  },
+  {
+    "id": 43,
+    "has_error": true,
+    "error_type": 6,
+    "error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The lamp negotiated a new salary.",
+    "ground_truth": "The employee negotiated a new salary."
+  },
+  {
+    "id": 44,
+    "has_error": true,
+    "error_type": 6,
+    "error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The keyboard filed a complaint with HR.",
+    "ground_truth": "The worker filed a complaint with HR."
+  },
+  {
+    "id": 45,
+    "has_error": true,
+    "error_type": 6,
+    "error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The invoice called the customer to apologize.",
+    "ground_truth": "The representative called the customer to apologize."
+  },
+  {
+    "id": 46,
+    "has_error": true,
+    "error_type": 6,
+    "error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The door promised to finish the project by Friday.",
+    "ground_truth": "The manager promised to finish the project by Friday."
+  },
+  {
+    "id": 47,
+    "has_error": true,
+    "error_type": 6,
+    "error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The traffic light signed the contract.",
+    "ground_truth": "The director signed the contract."
+  },
+  {
+    "id": 48,
+    "has_error": true,
+    "error_type": 6,
+    "error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "She drank the laptop to calm down.",
+    "ground_truth": "She drank water to calm down."
+  },
+  {
+    "id": 49,
+    "has_error": true,
+    "error_type": 6,
+    "error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "He ate the keyboard for breakfast.",
+    "ground_truth": "He ate toast for breakfast."
+  },
+  {
+    "id": 50,
+    "has_error": true,
+    "error_type": 6,
+    "error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "They swallowed the passport before boarding.",
+    "ground_truth": "They showed the passport before boarding."
+  }
+]

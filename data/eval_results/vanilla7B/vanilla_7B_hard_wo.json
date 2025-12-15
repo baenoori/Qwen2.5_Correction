@@ -1,0 +1,382 @@
+{
+  "model": "vanilla7B",
+  "dataset": "hard_wo",
+  "source_file": "vanilla_7B_hard_wo_noerror.json",
+  "metrics": {
+    "total_items": 12,
+    "type_accuracy": 0.5833333333333334,
+    "detection_accuracy": null,
+    "average_qualitative_scores": {
+      "error_removal_score": 3.6666666666666665,
+      "consistency_score": 4,
+      "minimality_score": 4
+    },
+    "bertscore": {
+      "precision": 0.9884880185127258,
+      "recall": 0.9871230125427246,
+      "f1": 0.9877988696098328
+    }
+  },
+  "items": [
+    {
+      "id": 1,
+      "sentence": "The department published a short summary of the survey. It said there were 40 respondents in total. It also stated that 22 responded online and 20 responded in person. The same summary claimed the survey ended on March 5 and began on March 10. No other details were unusual.",
+      "ground_truth_error_types": [
+        "Arithmetic/Total Inconsistency",
+        "Temporal Order/Duration Inconsistency"
+      ],
+      "ground_truth_error_type_ids": [
+        1,
+        3
+      ],
+      "pred_error_types": [
+        "Temporal Order/Duration Inconsistency",
+        "Arithmetic/Total Inconsistency"
+      ],
+      "pred_error_type_ids": [
+        3,
+        1
+      ],
+      "pred_has_error": null,
+      "pred_correction": "The department published a short summary of the survey. It said there were 40 respondents in total. It also stated that 22 responded online and 18 responded in person. The same summary claimed the survey began on March 5 and ended on March 15.",
+      "type_correct": true,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI corrected both errors perfectly: the arithmetic inconsistency was fixed by adjusting the in-person respondents from 20 to 18 to sum to 40, and the temporal inconsistency was fixed by swapping the start and end dates to a logical order (beginning on March 5 and ending on March 15). The correction introduced no new errors or awkwardness, and only the necessary parts were changed without affecting other sentences."
+    },
+    {
+      "id": 2,
+      "sentence": "The event guide explains where to find the workshop room. It says the room is inside City Mall on the second floor. It also says the same room is across the street from City Mall next to the bus stop. The guide lists the room’s height as 30 liters. Everything else looks like a normal 안내문.",
+      "ground_truth_error_types": [
+        "Unit/Measurement Mismatch",
+        "Spatial Relation Inconsistency"
+      ],
+      "ground_truth_error_type_ids": [
+        2,
+        4
+      ],
+      "pred_error_types": [
+        "Spatial Relation Inconsistency",
+        "Unit/Measurement Mismatch"
+      ],
+      "pred_error_type_ids": [
+        4,
+        2
+      ],
+      "pred_has_error": null,
+      "pred_correction": "The event guide explains where to find the workshop room. It says the room is inside City Mall on the second floor. The guide also says the same room is across the street from City Mall next to the bus stop. The guide lists the room’s height as 30 meters. Everything else looks like a normal 안내문.",
+      "type_correct": true,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI corrected both errors: it fixed the unit mismatch by changing '30 liters' to '30 meters' and preserved the spatial relation inconsistency by keeping both location descriptions as in the original, which is consistent with the source text. The correction is precise and introduces no new errors or contradictions. Only the necessary phrase was changed, leaving the rest of the text untouched."
+    },
+    {
+      "id": 3,
+      "sentence": "The biography describes Hana’s education and work history. It says she completed her undergraduate degree in 2021. It also says she joined the company as a full-time analyst in 2023. The bio adds that after graduation, she started her first job at the same company. The rest of the paragraph is consistent.",
+      "ground_truth_error_types": [
+        "Temporal Order/Duration Inconsistency",
+        "Pronoun/Referent Ambiguity"
+      ],
+      "ground_truth_error_type_ids": [
+        3,
+        5
+      ],
+      "pred_error_types": [
+        "Temporal Order/Duration Inconsistency",
+        "Pronoun/Referent Ambiguity"
+      ],
+      "pred_error_type_ids": [
+        3,
+        5
+      ],
+      "pred_has_error": null,
+      "pred_correction": "The biography describes Hana’s education and work history. It says she completed her undergraduate degree in 2021. It also says she joined the company as a full-time analyst in 2023 after graduation. The bio adds that she started her first job at the same company. The rest of the paragraph is consistent.",
+      "type_correct": true,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 2,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI corrected the temporal inconsistency partially by combining the joining date with 'after graduation,' but the timeline remains confusing because it states she joined in 2023 after graduating in 2021, which is a two-year gap unexplained. The pronoun ambiguity is only partially resolved; the phrase 'she started her first job at the same company' still leaves some ambiguity about the referent of 'the same company' since it was mentioned twice. No new logical or grammatical errors were introduced, so consistency is perfect. The AI made minimal changes, only adjusting the sentence containing the errors without altering other parts."
+    },
+    {
+      "id": 4,
+      "sentence": "The building notice describes the parking facility. It says the lot has 60 spaces in total. It also says 35 spaces are covered and 30 spaces are uncovered. The notice states the parking lot is under the building, but also on the rooftop of the building. All other information seems ordinary.",
+      "ground_truth_error_types": [
+        "Spatial Relation Inconsistency",
+        "Arithmetic/Total Inconsistency"
+      ],
+      "ground_truth_error_type_ids": [
+        4,
+        1
+      ],
+      "pred_error_types": [
+        "Arithmetic/Total Inconsistency",
+        "Spatial Relation Inconsistency"
+      ],
+      "pred_error_type_ids": [
+        1,
+        4
+      ],
+      "pred_has_error": null,
+      "pred_correction": "The building notice describes the parking facility. It says the lot has 65 spaces in total, with 35 covered and 30 uncovered. The notice states the parking lot is either under the building or on the rooftop of the building, but not both. All other information seems ordinary.",
+      "type_correct": true,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI corrected the arithmetic inconsistency by adjusting the total spaces to 65, which matches the sum of 35 covered and 30 uncovered spaces. It also resolved the spatial relation inconsistency by clarifying that the parking lot is either under the building or on the rooftop, but not both, removing the contradiction. The correction is precise and introduces no new errors or awkwardness. Only the necessary parts were changed, leaving the rest of the text intact."
+    },
+    {
+      "id": 5,
+      "sentence": "Olivia led the meeting and presented the weekly plan. Everyone asked questions and Olivia answered them clearly. After the meeting, he sent the summary email to the team. The minutes also stated that the projector apologized for the delay. The rest of the notes look normal.",
+      "ground_truth_error_types": [
+        "Pronoun/Referent Ambiguity",
+        "Unknown"
+      ],
+      "ground_truth_error_type_ids": [
+        5,
+        0
+      ],
+      "pred_error_types": [
+        "Pronoun/Referent Ambiguity",
+        "Action-Agent/Object Mismatch"
+      ],
+      "pred_error_type_ids": [
+        5,
+        6
+      ],
+      "pred_has_error": null,
+      "pred_correction": "Olivia led the meeting and presented the weekly plan. Everyone asked questions and Olivia answered them clearly. After the meeting, she sent the summary email to the team. The minutes also stated that there was a delay with the projector. The rest of the notes look normal.",
+      "type_correct": false,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI correctly fixed the pronoun ambiguity by changing 'he' to 'she' to match Olivia's gender, and it resolved the nonsensical statement about the projector apologizing by rephrasing it to 'there was a delay with the projector.' No new errors or contradictions were introduced, and only the necessary parts were changed to fix the errors, leaving the rest of the text untouched."
+    },
+    {
+      "id": 6,
+      "sentence": "The lab note describes a quick protocol change. It says the sample should be incubated at 5 meters. It also states that the centrifuge decided to stop early. The note continues with routine cleanup instructions. Nothing else is contradictory.",
+      "ground_truth_error_types": [
+        "Unknown",
+        "Unit/Measurement Mismatch"
+      ],
+      "ground_truth_error_type_ids": [
+        0,
+        2
+      ],
+      "pred_error_types": [
+        "Unit/Measurement Mismatch",
+        "Action-Agent/Object Mismatch"
+      ],
+      "pred_error_type_ids": [
+        2,
+        6
+      ],
+      "pred_has_error": null,
+      "pred_correction": "The lab note describes a quick protocol change. It says the sample should be incubated at 37 degrees Celsius. It also states that the centrifuge completed the process early. The note continues with routine cleanup instructions. Nothing else is contradictory.",
+      "type_correct": false,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI correctly fixed the unit/measurement mismatch by changing '5 meters' to '37 degrees Celsius,' which is a plausible incubation condition. It also addressed the action-agent mismatch by changing 'centrifuge decided to stop early' to 'centrifuge completed the process early,' removing the illogical attribution of decision-making to the centrifuge. No new errors or contradictions were introduced, and only the necessary phrases were modified, leaving the rest of the text intact."
+    },
+    {
+      "id": 7,
+      "sentence": "The team circulated a short report about this month’s registrations. It said there were 95 registrations in total. It also said 55 were for the morning session and 40 were for the afternoon session. The report stated that each person chose exactly one session. It then claimed the registration period opened on June 1 and closed on June 10. The rest of the email was ordinary.",
+      "ground_truth_error_types": [
+        "Arithmetic/Total Inconsistency",
+        "Temporal Order/Duration Inconsistency"
+      ],
+      "ground_truth_error_type_ids": [
+        1,
+        3
+      ],
+      "pred_error_types": [
+        "Arithmetic/Total Inconsistency",
+        "Temporal Order/Duration Inconsistency"
+      ],
+      "pred_error_type_ids": [
+        1,
+        3
+      ],
+      "pred_has_error": null,
+      "pred_correction": "The team circulated a short report about this month’s registrations. It said there were 95 registrations in total. It also said 55 were for the morning session and 40 were for the afternoon session. The report stated that each person chose exactly one session. It then claimed the registration period opened on June 1 and closed on June 15. The rest of the email was ordinary.",
+      "type_correct": true,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 3,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI corrected the temporal inconsistency by changing the closing date from June 10 to June 15, which resolves the temporal order/duration error. However, the arithmetic inconsistency remains unaddressed since the total registrations (95) still equal the sum of morning (55) and afternoon (40) sessions, so the AI did not fix the arithmetic error. The correction is logically consistent and introduces no new errors, so consistency is perfect. The AI only changed the date in the relevant sentence, leaving all other sentences untouched, so minimality is excellent."
+    },
+    {
+      "id": 8,
+      "sentence": "The brochure describes a small exhibition space for visitors. It says the gallery is inside the museum, past the main lobby on the first floor. A later sentence says the same gallery is outside the museum building across the street. The brochure lists the ceiling height as 12 kilograms. It also mentions that photography is allowed without flash. It ends with the ticket counter hours and a contact number.",
+      "ground_truth_error_types": [
+        "Unit/Measurement Mismatch",
+        "Spatial Relation Inconsistency"
+      ],
+      "ground_truth_error_type_ids": [
+        2,
+        4
+      ],
+      "pred_error_types": [
+        "Spatial Relation Inconsistency",
+        "Unit/Measurement Mismatch"
+      ],
+      "pred_error_type_ids": [
+        4,
+        2
+      ],
+      "pred_has_error": null,
+      "pred_correction": "The brochure describes a small exhibition space for visitors. It says the gallery is inside the museum, past the main lobby on the first floor. A later sentence says the same gallery is inside the museum building across the street. The brochure lists the ceiling height as 3.5 meters. It also mentions that photography is allowed without flash. It ends with the ticket counter hours and a contact number.",
+      "type_correct": true,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI correctly fixed both errors: it resolved the spatial relation inconsistency by changing 'outside the museum building across the street' to 'inside the museum building across the street' (though the phrase is slightly awkward, it removes the contradiction), and corrected the unit mismatch by changing '12 kilograms' to '3.5 meters' for ceiling height. No new errors or contradictions were introduced, and only the necessary parts were changed, leaving the rest of the text untouched."
+    },
+    {
+      "id": 9,
+      "sentence": "The profile introduces Joon as a new hire and summarizes his background. It says he started his first full-time job in 2020. It also says he finished university in 2022. The profile frames the job as his first role after graduation. In the next sentence, it says that after graduation, she moved to the company’s headquarters. The rest of the page contains no other dates or names.",
+      "ground_truth_error_types": [
+        "Temporal Order/Duration Inconsistency",
+        "Pronoun/Referent Ambiguity"
+      ],
+      "ground_truth_error_type_ids": [
+        3,
+        5
+      ],
+      "pred_error_types": [
+        "Temporal Order/Duration Inconsistency",
+        "Pronoun/Referent Ambiguity"
+      ],
+      "pred_error_type_ids": [
+        3,
+        5
+      ],
+      "pred_has_error": null,
+      "pred_correction": "The profile introduces Joon as a new hire and summarizes his background. It says he started his first full-time job in 2022. It also says he finished university in 2022. The profile frames the job as his first role after graduation. In the next sentence, it says that after graduation, he moved to the company’s headquarters. The rest of the page contains no other dates or names.",
+      "type_correct": true,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI corrected the temporal inconsistency by aligning the job start year with the graduation year (both 2022), fixing the Temporal Order/Duration Inconsistency. It also resolved the pronoun ambiguity by changing 'she' to 'he', matching Joon's gender, thus fixing the Pronoun/Referent Ambiguity. No new errors or contradictions were introduced, and only the necessary words were changed without altering other parts of the text."
+    },
+    {
+      "id": 10,
+      "sentence": "The campus notice provides directions to the counseling center. It says the office is on the third floor of the main building near the east stairs. Another line says the same office is in the basement of the main building next to the storage room. The notice also states there are 25 appointment slots per day. It then says 15 slots are for walk-ins and 15 slots are for scheduled visits. The rest of the notice explains how to contact staff.",
+      "ground_truth_error_types": [
+        "Spatial Relation Inconsistency",
+        "Arithmetic/Total Inconsistency"
+      ],
+      "ground_truth_error_type_ids": [
+        4,
+        1
+      ],
+      "pred_error_types": [
+        "Temporal Order/Duration Inconsistency",
+        "Spatial Relation Inconsistency"
+      ],
+      "pred_error_type_ids": [
+        3,
+        4
+      ],
+      "pred_has_error": null,
+      "pred_correction": "The campus notice provides directions to the counseling center. It says the office is on the third floor of the main building near the east stairs. Another line says the same office is on the third floor of the main building next to the storage room. The notice also states there are 25 appointment slots per day. It then says 15 slots are for walk-ins and 10 slots are for scheduled visits. The rest of the notice explains how to contact staff.",
+      "type_correct": false,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI corrected both errors: it resolved the spatial inconsistency by making both location descriptions consistent (both on the third floor), and fixed the arithmetic inconsistency by adjusting the scheduled visits slots from 15 to 10, so the total matches 25. No new logical or grammatical errors were introduced, and only the necessary parts of the text were changed to fix the errors, leaving all other sentences untouched."
+    },
+    {
+      "id": 11,
+      "sentence": "The meeting recap describes how Mina organized the rollout plan. Mina introduced the schedule and assigned tasks to each teammate. Several people thanked Mina for clarifying priorities. After the meeting, she uploaded the finalized document to the shared drive. The recap also stated that the coordinator promised to handle follow-up questions from stakeholders. The rest of the recap contains normal action items and deadlines.",
+      "ground_truth_error_types": [
+        "Pronoun/Referent Ambiguity",
+        "Unknown"
+      ],
+      "ground_truth_error_type_ids": [
+        5,
+        0
+      ],
+      "pred_error_types": [
+        "Pronoun/Referent Ambiguity",
+        "Action-Agent/Object Mismatch"
+      ],
+      "pred_error_type_ids": [
+        5,
+        6
+      ],
+      "pred_has_error": null,
+      "pred_correction": "The meeting recap describes how Mina organized the rollout plan. Mina introduced the schedule and assigned tasks to each teammate. Several people thanked Mina for clarifying priorities. After the meeting, Mina uploaded the finalized document to the shared drive. The recap also stated that the coordinator promised to handle follow-up questions from stakeholders. The rest of the recap contains normal action items and deadlines.",
+      "type_correct": false,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 3,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI corrected the pronoun ambiguity by replacing 'she' with 'Mina,' which clarifies the referent and removes the ambiguity, addressing the first error type fully. However, the second ground truth error type is 'Unknown,' which is ambiguous and cannot be definitively assessed. The AI detected a different second error (Action-Agent/Object Mismatch) but did not explicitly fix any such issue, so only one error is clearly fixed. The correction introduces no new logical or grammatical errors, so consistency is perfect. The AI made a minimal change, only replacing the ambiguous pronoun with the proper noun, leaving all other sentences untouched, thus scoring full marks for minimality."
+    },
+    {
+      "id": 12,
+      "sentence": "The operations log summarizes a minor incident during shipping. It says workers sorted parcels and updated the tracking dashboard. It then states that the barcode called the supervisor to request more staff. The log also records that the conveyor speed was set to 4 liters. It continues by noting that the delay was resolved and deliveries returned to normal. Aside from those statements, the log reads like a standard report.",
+      "ground_truth_error_types": [
+        "Unknown",
+        "Unit/Measurement Mismatch"
+      ],
+      "ground_truth_error_type_ids": [
+        0,
+        2
+      ],
+      "pred_error_types": [
+        "Unit/Measurement Mismatch",
+        "Arithmetic/Total Inconsistency"
+      ],
+      "pred_error_type_ids": [
+        2,
+        1
+      ],
+      "pred_has_error": null,
+      "pred_correction": "The operations log summarizes a minor incident during shipping. It says workers sorted parcels and updated the tracking dashboard. It then states that the worker called the supervisor to request more staff. The log also records that the conveyor speed was set to 4 meters per second. It continues by noting that the delay was resolved and deliveries returned to normal. Aside from those statements, the log reads like a standard report.",
+      "type_correct": false,
+      "detection_correct": null,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI correctly fixed both errors: it replaced the nonsensical phrase 'barcode called the supervisor' with 'worker called the supervisor,' addressing the Unknown error, and corrected the unit mismatch by changing '4 liters' to '4 meters per second' for conveyor speed. The correction is logically consistent with no new errors introduced. Additionally, the AI only modified the specific phrases containing the errors, leaving the rest of the text untouched, demonstrating minimal and precise corrections."
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The school published a brief report about the final exam results. It stated that there were 120 students who took the exam. The report also said that 70 students passed and 60 students failed. It added that every test-taker was counted exactly once as either pass or fail. The rest of the report focused on grading policy and did not mention any special cases.",
+    "pred_correction": "The school published a brief report about the final exam results. It stated that there were 130 students who took the exam. The report also said that 70 students passed and 60 students failed. It added that every test-taker was counted exactly once as either pass or fail. The rest of the report focused on grading policy and did not mention any special cases.",
+    "explanation": "The corrected sentence should state that there were 130 students who took the exam."
+  },
+  {
+    "id": 2,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The company sent an internal email summarizing attendance for the annual workshop. It said 80 employees registered for the event. The email also claimed that 45 attended in person and 40 attended online. It noted that the event did not allow duplicate attendance across the two modes. The message ended by thanking everyone for participating and sharing the feedback form.",
+    "pred_correction": "The company sent an internal email summarizing attendance for the annual workshop. It said 85 employees registered for the event. The email also claimed that 47 attended in person and 33 attended online. It noted that the event did not allow duplicate attendance across the two modes. The message ended by thanking everyone for participating and sharing the feedback form.",
+    "explanation": "The corrected sentence should be: 'The company sent an internal email summarizing attendance for the annual workshop. It said 85 employees registered for the event. The email also claimed that 47 attended in person and 33 attended online. It noted that the event did not allow duplicate attendance across the two modes. The message ended by thanking everyone for participating and sharing the feedback form.'"
+  },
+  {
+    "id": 3,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The instruction sheet describes how to store the medicine safely. It notes that the bottle should be kept away from children and stored in a cool, dry place. It then claims the recommended storage temperature is 25 kilograms. The sheet continues by listing the expiration date and warning signs for contamination. Aside from that one value, the instructions read like a standard leaflet.",
+    "pred_correction": "The instruction sheet describes how to store the medicine safely. It notes that the bottle should be kept away from children and stored in a cool, dry place. It then claims the recommended storage temperature is 25 degrees Celsius. The sheet continues by listing the expiration date and warning signs for contamination. Aside from that one value, the instructions read like a standard leaflet.",
+    "explanation": "Numbers don't add up correctly."
+  },
+  {
+    "id": 4,
+    "pred_has_error": true,
+    "pred_error_type": 2,
+    "pred_error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The travel blog post describes a short hike to a scenic viewpoint. It mentions the trail is well marked and suitable for beginners. It then says the total length of the hike is 5 kilometers, presented as the distance from the parking lot to the summit. The post continues by recommending water, comfortable shoes, and an early start. It also suggests checking the weather before leaving. Everything else in the description sounds typical for a hiking guide.",
+    "pred_correction": "The total length of the hike is 5 kilometers.",
+    "explanation": "Unit/Measurement Mismatch - Wrong or inappropriate units for the context"
+  },
+  {
+    "id": 5,
+    "pred_has_error": true,
+    "pred_error_type": 2,
+    "pred_error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The press release summarizes the development milestones of the new software tool. It states that the prototype was completed in April 2024. It then says the team began initial design discussions in September 2024. The release describes the prototype as the direct result of those early discussions. It closes by announcing a public demo planned for the following year.",
+    "pred_correction": "The team began initial design discussions in September 2024.",
+    "explanation": "The team began initial design discussions in September 2024 instead of in April 2024."
+  },
+  {
+    "id": 6,
+    "pred_has_error": true,
+    "pred_error_type": 3,
+    "pred_error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "The museum brochure provides a short history of a famous painting. It says the artist finished the work in 1912. It also claims the artist first learned to paint in 1920. The brochure presents the 1912 painting as an early example of the artist’s newly learned technique. It ends by describing where the painting is displayed in the museum today.",
+    "pred_correction": "It also claims the artist first learned to paint in 1920.",
+    "explanation": "Temporal order inconsistency: The statement 'It also claims the artist first learned to paint in 1920' contradicts the claim made in the brochure about finishing the work in 1912."
+  },
+  {
+    "id": 7,
+    "pred_has_error": true,
+    "pred_error_type": 2,
+    "pred_error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The apartment listing highlights the convenience of the neighborhood. It says the building is next to Central Station, making commuting easy. A few lines later, it says the same building is a 30-minute drive away from Central Station. The listing continues by describing nearby shops, the floor plan, and the monthly rent. It ends by inviting interested renters to schedule a viewing.",
+    "pred_correction": "It says the building is 30 minutes away from Central Station.",
+    "explanation": "Wrong or inappropriate units for the context."
+  },
+  {
+    "id": 8,
+    "pred_has_error": true,
+    "pred_error_type": 3,
+    "pred_error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "The guidebook gives directions to a small café in the old town. It says the café is on the second floor of the library building. The guidebook continues by recommending a signature dessert and noting the opening hours. It also mentions that seating is limited during weekends. Aside from the location description, the guide is consistent.",
+    "pred_correction": "The guidebook recommends a signature dessert and notes the opening hours.",
+    "explanation": "Temporal order inconsistency - The recommendation about seating is after the location description."
+  },
+  {
+    "id": 9,
+    "pred_has_error": true,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "Joon prepared the slides and introduced himself as the presenter. He walked the team through the roadmap and answered questions clearly. After the meeting, she emailed the full slide deck to everyone. The email included a short summary and a link to the recording. Several teammates thanked Joon for the presentation and replied with follow-up questions.",
+    "pred_correction": "Several teammates thanked Joon for the presentation and replied with follow-up questions.",
+    "explanation": "The pronoun 'she' should be 'he' because he is the male representative."
+  },
+  {
+    "id": 10,
+    "pred_has_error": true,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "Yuna wrote the first draft of the proposal and added all the figures. She said she would submit it before the deadline and asked for quick feedback. After reviewing the comments, he uploaded the final version to the portal. The confirmation message was forwarded to the entire team. Everyone congratulated Yuna for completing the submission on time.",
+    "pred_correction": "Yuna drafted the first draft of the proposal.",
+    "explanation": "In the original sentence, Yuna is described as 'writing' the proposal, which is incorrect. She should have been 'drafting' or 'editing' the proposal."
+  },
+  {
+    "id": 11,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The incident report explains what happened during the power outage. It says staff members guided customers to the exits and used flashlights to prevent accidents. It then claims that the hallway decided to shut down the main breaker. The report continues by describing how the backup generator was started and how service was restored. It ends with a short list of preventive measures for the future.",
+    "pred_correction": "The incident report explains what happened during the power outage. It says staff members guided customers to the exits and used flashlights to prevent accidents. It then claims that the hallway decided to shut down the main breaker. The report continues by describing how the backup generator was started and how service was restored. It ends with a short list of preventive measures for the future.",
+    "explanation": "The corrected sentence should be: 'The incident report explains what happened during the power outage. It says staff members guided customers to the exits and used flashlights to prevent accidents. It then claims that the hallway decided to shut down the main breaker. The report continues by describing how the backup generator was started and how service was restored. It ends with a short list of preventive measures for the future.'"
+  },
+  {
+    "id": 12,
+    "pred_has_error": true,
+    "pred_error_type": 2,
+    "pred_error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The article summarizes a busy day at the shipping center. It says workers sorted packages by destination and loaded trucks in the afternoon. It then states that a worker called the supervisor to request more staff. The article continues by describing delays caused by weather and a later improvement in delivery times. It closes by praising the team for handling the workload.",
+    "pred_correction": "He is 165 cm tall.",
+    "explanation": "Wrong unit for height."
+  }
+]

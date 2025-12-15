@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model files (large files)
+lora_Qwen2.5/merged_model/*.safetensors
+lora_Qwen2.5/merged_model/*.bin
+lora_Qwen2.5/checkpoints/
+
+# Wandb
+wandb/
+**/wandb/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

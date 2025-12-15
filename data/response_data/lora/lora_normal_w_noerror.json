@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The team has 20 members: 12 are engineers and 10 are designers.",
+    "pred_correction": "The team has 23 members: 12 are engineers and 10 are designers.",
+    "explanation": "There is an inconsistency between the number of members listed as 'team' and those specified as 'engineers' and 'designers'. The correct number should be 23."
+  },
+  {
+    "id": 2,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The basket contains 15 apples: 9 are red and 8 are green.",
+    "pred_correction": "The basket contains 17 apples: 9 are red and 8 are green.",
+    "explanation": "There is an inconsistency between the number of red apples and green apples."
+  },
+  {
+    "id": 3,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "In the class of 30 students, 18 passed and 15 failed.",
+    "pred_correction": "In the class of 31 students, 18 passed and 15 failed.",
+    "explanation": "There is an arithmetic inconsistency because the total number of students does not match the given numbers."
+  },
+  {
+    "id": 4,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The recipe needs 3 cups of flour: 2 cups for the dough and 2 cups for the topping.",
+    "pred_correction": "The recipe needs 5 cups of flour: 2 cups for the dough and 3 cups for the topping.",
+    "explanation": "Numbers don't add up correctly."
+  },
+  {
+    "id": 5,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The trip lasted 8 days: 5 days in Paris and 3 days in Rome.",
+    "pred_correction": "The trip lasted 8 days: 5 days in Paris and 3 days in Rome.",
+    "explanation": "The corrected sentence should be 'The trip lasted 8 days: 5 days in Paris and 3 days in Rome.'"
+  },
+  {
+    "id": 6,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "He is 180 kg tall.",
+    "pred_correction": null,
+    "explanation": "The sentence is logically incorrect because it states someone's height without specifying their weight."
+  },
+  {
+    "id": 7,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The bottle holds 2 kilograms of water.",
+    "pred_correction": "The bottle holds 2 kilograms of water.",
+    "explanation": "The sentence contains a logical inconsistency."
+  },
+  {
+    "id": 8,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "She drove 60 minutes to the office.",
+    "pred_correction": null,
+    "explanation": "The sentence is logically incorrect because it does not specify the distance traveled."
+  },
+  {
+    "id": 9,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The package weighs 3 kilograms.",
+    "pred_correction": "The package weighs 3 kilograms.",
+    "explanation": "The sentence contains a logical inconsistency."
+  },
+  {
+    "id": 10,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The room temperature is 25°C.",
+    "pred_correction": null,
+    "explanation": "The sentence is logically incorrect because it does not specify the unit of measurement."
+  },
+  {
+    "id": 11,
+    "pred_has_error": true,
+    "pred_error_type": 3,
+    "pred_error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "She started her job in 2022 and graduated from college in 2024.",
+    "pred_correction": "She started her job in 2022 and graduated from college in 2024.",
+    "explanation": "Events in impossible chronological order."
+  },
+  {
+    "id": 12,
+    "pred_has_error": true,
+    "pred_error_type": 3,
+    "pred_error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "He got married in 2018 and met his partner in 2020.",
+    "pred_correction": "He met his partner in 2018 and got married in 2018.",
+    "explanation": "He met his partner in 2018 and got married in 2018."
+  },
+  {
+    "id": 13,
+    "pred_has_error": true,
+    "pred_error_type": 3,
+    "pred_error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "The conference ended on May 10, and it began on May 12.",
+    "pred_correction": "The conference began on May 10 and ended on May 12.",
+    "explanation": "Temporal order inconsistency"
+  },
+  {
+    "id": 14,
+    "pred_has_error": true,
+    "pred_error_type": 3,
+    "pred_error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "She submitted the application on Friday and wrote it on Sunday.",
+    "pred_correction": "She wrote the application on Friday and submitted it on Sunday.",
+    "explanation": "Temporal order inconsistency - Writing on Sunday contradicts submitting on Friday."
+  },
+  {
+    "id": 15,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The baby was born, and learned to walk at 18 months.",
+    "pred_correction": "The baby was born, and learned to walk at 18 months.",
+    "explanation": "The corrected sentence should be 'The baby was born, and learned to walk at 18 months.'"
+  },
+  {
+    "id": 16,
+    "pred_has_error": true,
+    "pred_error_type": 4,
+    "pred_error_type_name": "Spatial Relation Inconsistency",
+    "sentence": "The café is inside the mall, but it is also across the street from the mall.",
+    "pred_correction": "The café is inside the mall.",
+    "explanation": "The statement contradicts the given information."
+  },
+  {
+    "id": 17,
+    "pred_has_error": true,
+    "pred_error_type": 4,
+    "pred_error_type_name": "Spatial Relation Inconsistency",
+    "sentence": "The statue is to the left of the entrance, but it is also to the right of the entrance.",
+    "pred_correction": "The statue is to the left of the entrance, but it is also to the right of the entrance.",
+    "explanation": "The corrected sentence should be 'The statue is to the left of the entrance, but it is also to the right of the entrance.'"
+  },
+  {
+    "id": 18,
+    "pred_has_error": true,
+    "pred_error_type": 3,
+    "pred_error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "The keys are in the drawer, but they are also on the roof.",
+    "pred_correction": "They are on the roof.",
+    "explanation": "Temporal order inconsistency."
+  },
+  {
+    "id": 19,
+    "pred_has_error": true,
+    "pred_error_type": 3,
+    "pred_error_type_name": "Temporal Order/Duration Inconsistency",
+    "sentence": "The hotel is north of the river, but it is also south of the river.",
+    "pred_correction": "The hotel is north of the river.",
+    "explanation": "Temporal order inconsistency."
+  },
+  {
+    "id": 20,
+    "pred_has_error": true,
+    "pred_error_type": 2,
+    "pred_error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "The bookstore is 20 miles away from the station.",
+    "pred_correction": "The bookstore is 20 kilometers away from the station.",
+    "explanation": "The unit 'miles' should be changed to 'kilometers'"
+  },
+  {
+    "id": 21,
+    "pred_has_error": true,
+    "pred_error_type": 2,
+    "pred_error_type_name": "Unit/Measurement Mismatch",
+    "sentence": "Jina texted Minho after the meeting because he forgot to bring her laptop.",
+    "pred_correction": "He is 165 cm tall.",
+    "explanation": "Wrong unit for height."
+  },
+  {
+    "id": 22,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "Emma called David when she lost his phone.",
+    "pred_correction": "Emma called David when she lost her phone.",
+    "explanation": "The corrected sentence should be 'Emma called David when she lost his phone.'"
+  },
+  {
+    "id": 23,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "Sara thanked Tom because he received the award.",
+    "pred_correction": "Sara thanked Tom because he received the award.",
+    "explanation": "The corrected sentence should be 'Sara thanked Tom because he received the award.'"
+  },
+  {
+    "id": 24,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "Kevin argued with Lucy because he forgot his wallet.",
+    "pred_correction": "Kevin argued with Lucy because he forgot his wallet.",
+    "explanation": "There is a grammatical error in the sentence."
+  },
+  {
+    "id": 25,
+    "pred_has_error": true,
+    "pred_error_type": 5,
+    "pred_error_type_name": "Pronoun/Referent Ambiguity",
+    "sentence": "Mina emailed Joon after she finished her presentation.",
+    "pred_correction": "Mina emailed Joon after she finished her presentation.",
+    "explanation": "Inanimate objects like lamps do not perform human or animal actions."
+  },
+  {
+    "id": 26,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The rock apologized for being late.",
+    "pred_correction": "The rock apologized for being late.",
+    "explanation": "The sentence contains a grammatical error."
+  },
+  {
+    "id": 27,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The chair decided to quit its job.",
+    "pred_correction": "The director decided to quit its job.",
+    "explanation": "The sentence contains a grammatical error."
+  },
+  {
+    "id": 28,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The rain signed the contract yesterday.",
+    "pred_correction": "The rain signed the contract yesterday.",
+    "explanation": "The sentence contains a grammatical error."
+  },
+  {
+    "id": 29,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The idea ate a sandwich for lunch.",
+    "pred_correction": "The idea ate a sandwich for lunch.",
+    "explanation": "The sentence contains a grammatical error."
+  },
+  {
+    "id": 30,
+    "pred_has_error": true,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The student argued with the teacher.",
+    "pred_correction": "The student argued with the teacher.",
+    "explanation": "The sentence contains a grammatical error."
+  }
+]

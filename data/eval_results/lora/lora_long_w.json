@@ -1,0 +1,238 @@
+{
+  "model": "lora",
+  "dataset": "long_w",
+  "source_file": "lora_long_w_noerror.json",
+  "metrics": {
+    "total_items": 12,
+    "type_accuracy": 0.3333333333333333,
+    "detection_accuracy": 0.8333333333333334,
+    "average_qualitative_scores": {
+      "error_removal_score": 1.8333333333333333,
+      "consistency_score": 2.6666666666666665,
+      "minimality_score": 1.4166666666666667
+    },
+    "bertscore": {
+      "precision": 0.9491025805473328,
+      "recall": 0.9045517444610596,
+      "f1": 0.9258906245231628
+    }
+  },
+  "items": [
+    {
+      "id": 1,
+      "sentence": "The school published a brief report about the final exam results. It stated that there were 120 students who took the exam. The report also said that 70 students passed and 60 students failed. It added that every test-taker was counted exactly once as either pass or fail. The rest of the report focused on grading policy and did not mention any special cases.",
+      "ground_truth_error_type": "Arithmetic/Total Inconsistency",
+      "ground_truth_error_type_id": 1,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The school published a brief report about the final exam results. It stated that there were 130 students who took the exam. The report also said that 70 students passed and 60 students failed. It added that every test-taker was counted exactly once as either pass or fail. The rest of the report focused on grading policy and did not mention any special cases.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 3
+      },
+      "judge_reasoning": "The original error was an arithmetic inconsistency: 70 passed + 60 failed = 130, which did not match the original total of 120 students. The AI corrected the total number of students to 130, which perfectly aligns with the sum of pass and fail counts, fully removing the arithmetic inconsistency (score 4). The rest of the text remains unchanged and consistent, so the overall text is logically consistent (score 4). However, the AI changed the total students number in the first sentence, which is the only necessary change, but it also slightly altered the sentence structure by changing '120' to '130' without any other modifications. Since only one sentence was changed and only the number was updated, minimality is good but not perfect because the sentence was slightly altered beyond just the number (score 3)."
+    },
+    {
+      "id": 2,
+      "sentence": "The company sent an internal email summarizing attendance for the annual workshop. It said 80 employees registered for the event. The email also claimed that 45 attended in person and 40 attended online. It noted that the event did not allow duplicate attendance across the two modes. The message ended by thanking everyone for participating and sharing the feedback form.",
+      "ground_truth_error_type": "Arithmetic/Total Inconsistency",
+      "ground_truth_error_type_id": 1,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The company sent an internal email summarizing attendance for the annual workshop. It said 85 employees registered for the event. The email also claimed that 47 attended in person and 33 attended online. It noted that the event did not allow duplicate attendance across the two modes. The message ended by thanking everyone for participating and sharing the feedback form.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI corrected the total registered employees from 80 to 85 and adjusted the in-person and online attendance numbers to 47 and 33 respectively, which sum to 80. This resolves the original arithmetic inconsistency where the sum of attendance exceeded the total registered. The correction is logically consistent throughout the text, with no contradictions or new errors introduced. Additionally, the AI only modified the necessary numbers in the sentences containing the error, leaving the rest of the text untouched. Therefore, all scores are at the highest level."
+    },
+    {
+      "id": 3,
+      "sentence": "The instruction sheet describes how to store the medicine safely. It notes that the bottle should be kept away from children and stored in a cool, dry place. It then claims the recommended storage temperature is 25 kilograms. The sheet continues by listing the expiration date and warning signs for contamination. Aside from that one value, the instructions read like a standard leaflet.",
+      "ground_truth_error_type": "Unit/Measurement Mismatch",
+      "ground_truth_error_type_id": 2,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The instruction sheet describes how to store the medicine safely. It notes that the bottle should be kept away from children and stored in a cool, dry place. It then claims the recommended storage temperature is 25 degrees Celsius. The sheet continues by listing the expiration date and warning signs for contamination. Aside from that one value, the instructions read like a standard leaflet.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI perfectly fixed the unit/measurement mismatch by changing '25 kilograms' to the correct unit '25 degrees Celsius', fully removing the original error. No other parts of the text were altered, preserving the original meaning and structure. There are no contradictions or inconsistencies introduced, and the correction is minimal and precise, affecting only the erroneous phrase."
+    },
+    {
+      "id": 4,
+      "sentence": "The travel blog post describes a short hike to a scenic viewpoint. It mentions the trail is well marked and suitable for beginners. It then says the total length of the hike is 5 kilometers, presented as the distance from the parking lot to the summit. The post continues by recommending water, comfortable shoes, and an early start. It also suggests checking the weather before leaving. Everything else in the description sounds typical for a hiking guide.",
+      "ground_truth_error_type": "Unit/Measurement Mismatch",
+      "ground_truth_error_type_id": 2,
+      "pred_error_type": "Unit/Measurement Mismatch",
+      "pred_error_type_id": 2,
+      "pred_has_error": true,
+      "pred_correction": "The total length of the hike is 5 kilometers.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 2,
+        "consistency_score": 4,
+        "minimality_score": 1
+      },
+      "judge_reasoning": "The AI's correction only restates the total length as 5 kilometers without addressing the unit/measurement mismatch error in the original text. Since the original text implied a mismatch (likely mixing units or incorrectly stating the distance), simply repeating the same measurement does not remove the error. Therefore, the error removal score is low (2) for a partial fix attempt. There are no contradictions or inconsistencies introduced in the correction, so the consistency score is perfect (4). However, the AI's correction is minimal but incomplete, and it removed most of the original context, rewriting the sentence excessively and omitting other valid sentences, resulting in a minimality score of 1."
+    },
+    {
+      "id": 5,
+      "sentence": "The press release summarizes the development milestones of the new software tool. It states that the prototype was completed in April 2024. It then says the team began initial design discussions in September 2024. The release describes the prototype as the direct result of those early discussions. It closes by announcing a public demo planned for the following year.",
+      "ground_truth_error_type": "Temporal Order/Duration Inconsistency",
+      "ground_truth_error_type_id": 3,
+      "pred_error_type": "Unit/Measurement Mismatch",
+      "pred_error_type_id": 2,
+      "pred_has_error": true,
+      "pred_correction": "The team began initial design discussions in September 2024.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 1,
+        "consistency_score": 2,
+        "minimality_score": 1
+      },
+      "judge_reasoning": "The original error was a temporal order inconsistency (prototype completed before design discussions). The AI's correction simply removes all but the design discussion sentence, which does not fix the temporal inconsistency but rather avoids it by omission. This is a weak attempt, so error_removal_score is 1. The corrected text is incomplete and creates a new issue of missing context, leading to partial consistency score of 2. The AI made a significant unnecessary change by deleting most of the text, so minimality_score is 1."
+    },
+    {
+      "id": 6,
+      "sentence": "The museum brochure provides a short history of a famous painting. It says the artist finished the work in 1912. It also claims the artist first learned to paint in 1920. The brochure presents the 1912 painting as an early example of the artist’s newly learned technique. It ends by describing where the painting is displayed in the museum today.",
+      "ground_truth_error_type": "Temporal Order/Duration Inconsistency",
+      "ground_truth_error_type_id": 3,
+      "pred_error_type": "Temporal Order/Duration Inconsistency",
+      "pred_error_type_id": 3,
+      "pred_has_error": true,
+      "pred_correction": "It also claims the artist first learned to paint in 1920.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 0,
+        "minimality_score": 0
+      },
+      "judge_reasoning": "The AI's correction fails to address the temporal inconsistency. It simply outputs the problematic sentence alone, removing all context but not fixing the error. The temporal order inconsistency remains fully present. Additionally, the AI's output is incomplete and nonsensical as a standalone text, causing a critical new error. The minimality score is zero because the AI removed almost the entire original text instead of minimally correcting the error. Overall, the correction is a failure on all counts."
+    },
+    {
+      "id": 7,
+      "sentence": "The apartment listing highlights the convenience of the neighborhood. It says the building is next to Central Station, making commuting easy. A few lines later, it says the same building is a 30-minute drive away from Central Station. The listing continues by describing nearby shops, the floor plan, and the monthly rent. It ends by inviting interested renters to schedule a viewing.",
+      "ground_truth_error_type": "Spatial Relation Inconsistency",
+      "ground_truth_error_type_id": 4,
+      "pred_error_type": "Unit/Measurement Mismatch",
+      "pred_error_type_id": 2,
+      "pred_has_error": true,
+      "pred_correction": "It says the building is 30 minutes away from Central Station.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 2,
+        "consistency_score": 1,
+        "minimality_score": 0
+      },
+      "judge_reasoning": "The AI's correction removes the direct contradiction by eliminating the 'next to Central Station' claim and only stating the building is 30 minutes away, which addresses the spatial inconsistency partially. However, it fails to preserve the rest of the original text, which is necessary for global consistency. The correction is incomplete and creates a new issue by omitting the surrounding context, making the text fragmentary and inconsistent with the original listing. This is a significant deviation, resulting in a poor minimality score. The consistency score is low because the correction does not maintain the original text's structure and content, leading to a loss of coherence. Overall, the error is only partially fixed, and the correction is minimal but incomplete and inconsistent."
+    },
+    {
+      "id": 8,
+      "sentence": "The guidebook gives directions to a small café in the old town. It says the café is on the second floor of the library building. The guidebook continues by recommending a signature dessert and noting the opening hours. It also mentions that seating is limited during weekends. Aside from the location description, the guide is consistent.",
+      "ground_truth_error_type": "Spatial Relation Inconsistency",
+      "ground_truth_error_type_id": 4,
+      "pred_error_type": "Temporal Order/Duration Inconsistency",
+      "pred_error_type_id": 3,
+      "pred_has_error": true,
+      "pred_correction": "The guidebook recommends a signature dessert and notes the opening hours.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 0
+      },
+      "judge_reasoning": "The ground truth error is a spatial relation inconsistency, specifically about the café's location on the second floor of the library building. The AI's correction removes all spatial information instead of fixing the inconsistency, thus failing to address the specified error at all (score 0). The corrected text is internally consistent as it only contains dessert recommendation and opening hours, so no contradictions arise (score 4). However, the AI's correction is not minimal; it deletes multiple sentences and information unrelated to the error, which is excessive (score 0)."
+    },
+    {
+      "id": 9,
+      "sentence": "Joon prepared the slides and introduced himself as the presenter. He walked the team through the roadmap and answered questions clearly. After the meeting, she emailed the full slide deck to everyone. The email included a short summary and a link to the recording. Several teammates thanked Joon for the presentation and replied with follow-up questions.",
+      "ground_truth_error_type": "Pronoun/Referent Ambiguity",
+      "ground_truth_error_type_id": 5,
+      "pred_error_type": "Action-Agent/Object Mismatch",
+      "pred_error_type_id": 6,
+      "pred_has_error": true,
+      "pred_correction": "Several teammates thanked Joon for the presentation and replied with follow-up questions.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 0
+      },
+      "judge_reasoning": "The original error was a pronoun/referent ambiguity caused by inconsistent gender pronouns referring to Joon ('himself' and 'he' vs. 'she'). The AI's correction removes all sentences except the last one, which contains no pronouns and no ambiguity. Thus, the error is completely removed (score 4). The corrected text is internally consistent and free of contradictions (score 4). However, the AI's correction is not minimal at all; it deletes three entire sentences unrelated to the error instead of fixing the pronoun in the third sentence. This is an excessive and unnecessary change, resulting in a minimality score of 0."
+    },
+    {
+      "id": 10,
+      "sentence": "Yuna wrote the first draft of the proposal and added all the figures. She said she would submit it before the deadline and asked for quick feedback. After reviewing the comments, he uploaded the final version to the portal. The confirmation message was forwarded to the entire team. Everyone congratulated Yuna for completing the submission on time.",
+      "ground_truth_error_type": "Pronoun/Referent Ambiguity",
+      "ground_truth_error_type_id": 5,
+      "pred_error_type": "Action-Agent/Object Mismatch",
+      "pred_error_type_id": 6,
+      "pred_has_error": true,
+      "pred_correction": "Yuna drafted the first draft of the proposal.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 1,
+        "consistency_score": 1,
+        "minimality_score": 0
+      },
+      "judge_reasoning": "The AI's correction fails to fix the pronoun ambiguity because it only outputs a truncated first sentence and omits the rest of the text, including the problematic pronoun 'he'. This means the original error is still present in the omitted text if considered, or the text is incomplete and inconsistent. The correction introduces a major logical issue by removing most of the original text, breaking the narrative flow and context, resulting in poor consistency. Additionally, the AI did not minimally fix the error but instead rewrote the text excessively by truncating it, which is unnecessary. Therefore, error_removal_score is 1 (weak attempt), consistency_score is 1 (major logical inconsistency due to truncation), and minimality_score is 0 (excessive rewriting)."
+    },
+    {
+      "id": 11,
+      "sentence": "The incident report explains what happened during the power outage. It says staff members guided customers to the exits and used flashlights to prevent accidents. It then claims that the hallway decided to shut down the main breaker. The report continues by describing how the backup generator was started and how service was restored. It ends with a short list of preventive measures for the future.",
+      "ground_truth_error_type": "Unknown",
+      "ground_truth_error_type_id": 0,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The incident report explains what happened during the power outage. It says staff members guided customers to the exits and used flashlights to prevent accidents. It then claims that the hallway decided to shut down the main breaker. The report continues by describing how the backup generator was started and how service was restored. It ends with a short list of preventive measures for the future.",
+      "type_correct": false,
+      "detection_correct": false,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "Since the original text and the AI's corrected text are identical, no correction was made. The ground truth error type is 'Unknown' and the AI detected an 'Arithmetic/Total Inconsistency' which does not exist in the text. Therefore, the error removal score is 0 because no error was fixed. However, the text is internally consistent and contains no contradictions, so the consistency score is 4. The AI made no changes, so minimality score is 4. Overall, the AI failed to address any error but did not introduce any new issues."
+    },
+    {
+      "id": 12,
+      "sentence": "The article summarizes a busy day at the shipping center. It says workers sorted packages by destination and loaded trucks in the afternoon. It then states that a worker called the supervisor to request more staff. The article continues by describing delays caused by weather and a later improvement in delivery times. It closes by praising the team for handling the workload.",
+      "ground_truth_error_type": "Unknown",
+      "ground_truth_error_type_id": 0,
+      "pred_error_type": "Unit/Measurement Mismatch",
+      "pred_error_type_id": 2,
+      "pred_has_error": true,
+      "pred_correction": "He is 165 cm tall.",
+      "type_correct": false,
+      "detection_correct": false,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 0,
+        "minimality_score": 0
+      },
+      "judge_reasoning": "The AI's correction is entirely unrelated to the original text and does not address any error present in the original passage. The original text contains no unit or measurement mismatch error, and the AI's correction introduces a new, irrelevant sentence about height. This results in a complete failure to fix the original text and introduces a nonsensical, inconsistent statement. Therefore, all scores are zero."
+    }
+  ]
+}

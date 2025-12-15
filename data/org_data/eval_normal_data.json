@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "sentence": "The team has 20 members: 12 are engineers and 10 are designers.",
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency"
+  },
+  {
+    "id": 2,
+    "sentence": "The basket contains 15 apples: 9 are red and 8 are green.",
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency"
+  },
+  {
+    "id": 3,
+    "sentence": "In the class of 30 students, 18 passed and 15 failed.",
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency"
+  },
+  {
+    "id": 4,
+    "sentence": "The recipe needs 3 cups of flour: 2 cups for the dough and 2 cups for the topping.",
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency"
+  },
+  {
+    "id": 5,
+    "sentence": "The trip lasted 8 days: 5 days in Paris and 3 days in Rome.",
+    "error_type": 1,
+    "error_type_name": "Arithmetic/Total Inconsistency"
+  },
+  {
+    "id": 6,
+    "sentence": "He is 180 kg tall.",
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch"
+  },
+  {
+    "id": 7,
+    "sentence": "The bottle holds 2 kilograms of water.",
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch"
+  },
+  {
+    "id": 8,
+    "sentence": "She drove 60 minutes to the office.",
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch"
+  },
+  {
+    "id": 9,
+    "sentence": "The package weighs 3 kilograms.",
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch"
+  },
+  {
+    "id": 10,
+    "sentence": "The room temperature is 25°C.",
+    "error_type": 2,
+    "error_type_name": "Unit/Measurement Mismatch"
+  },
+  {
+    "id": 11,
+    "sentence": "She started her job in 2022 and graduated from college in 2024.",
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency"
+  },
+  {
+    "id": 12,
+    "sentence": "He got married in 2018 and met his partner in 2020.",
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency"
+  },
+  {
+    "id": 13,
+    "sentence": "The conference ended on May 10, and it began on May 12.",
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency"
+  },
+  {
+    "id": 14,
+    "sentence": "She submitted the application on Friday and wrote it on Sunday.",
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency"
+  },
+  {
+    "id": 15,
+    "sentence": "The baby was born, and learned to walk at 18 months.",
+    "error_type": 3,
+    "error_type_name": "Temporal Order/Duration Inconsistency"
+  },
+  {
+    "id": 16,
+    "sentence": "The café is inside the mall, but it is also across the street from the mall.",
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency"
+  },
+  {
+    "id": 17,
+    "sentence": "The statue is to the left of the entrance, but it is also to the right of the entrance.",
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency"
+  },
+  {
+    "id": 18,
+    "sentence": "The keys are in the drawer, but they are also on the roof.",
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency"
+  },
+  {
+    "id": 19,
+    "sentence": "The hotel is north of the river, but it is also south of the river.",
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency"
+  },
+  {
+    "id": 20,
+    "sentence": "The bookstore is 20 miles away from the station.",
+    "error_type": 4,
+    "error_type_name": "Spatial Relation Inconsistency"
+  },
+  {
+    "id": 21,
+    "sentence": "Jina texted Minho after the meeting because he forgot to bring her laptop.",
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity"
+  },
+  {
+    "id": 22,
+    "sentence": "Emma called David when she lost his phone.",
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity"
+  },
+  {
+    "id": 23,
+    "sentence": "Sara thanked Tom because he received the award.",
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity"
+  },
+  {
+    "id": 24,
+    "sentence": "Kevin argued with Lucy because he forgot his wallet.",
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity"
+  },
+  {
+    "id": 25,
+    "sentence": "Mina emailed Joon after she finished her presentation.",
+    "error_type": 5,
+    "error_type_name": "Pronoun/Referent Ambiguity"
+  },
+  {
+    "id": 26,
+    "sentence": "The rock apologized for being late.",
+    "error_type": 0,
+    "error_type_name": "Unknown"
+  },
+  {
+    "id": 27,
+    "sentence": "The chair decided to quit its job.",
+    "error_type": 0,
+    "error_type_name": "Unknown"
+  },
+  {
+    "id": 28,
+    "sentence": "The rain signed the contract yesterday.",
+    "error_type": 0,
+    "error_type_name": "Unknown"
+  },
+  {
+    "id": 29,
+    "sentence": "The idea ate a sandwich for lunch.",
+    "error_type": 0,
+    "error_type_name": "Unknown"
+  },
+  {
+    "id": 30,
+    "sentence": "The student argued with the teacher.",
+    "error_type": 0,
+    "error_type_name": "Unknown"
+  }
+]

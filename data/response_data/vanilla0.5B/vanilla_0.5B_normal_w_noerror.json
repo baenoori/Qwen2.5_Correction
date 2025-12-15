@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The team has 20 members: 12 are engineers and 10 are designers.",
+    "pred_correction": "The team has 20 members: 12 are engineers and 10 are designers.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 2,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The basket contains 15 apples: 9 are red and 8 are green.",
+    "pred_correction": "The basket contains 15 apples: 9 are red and 8 are green.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 3,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "In the class of 30 students, 18 passed and 15 failed.",
+    "pred_correction": "In the class of 30 students, 18 passed and 15 failed.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 4,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The recipe needs 3 cups of flour: 2 cups for the dough and 2 cups for the topping.",
+    "pred_correction": null,
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 5,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The trip lasted 8 days: 5 days in Paris and 3 days in Rome.",
+    "pred_correction": null,
+    "explanation": ""
+  },
+  {
+    "id": 6,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "He is 180 kg tall.",
+    "pred_correction": null,
+    "explanation": ""
+  },
+  {
+    "id": 7,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The bottle holds 2 kilograms of water.",
+    "pred_correction": "The bottle holds 2 kilograms of water.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 8,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "She drove 60 minutes to the office.",
+    "pred_correction": "She drove 60 minutes to the office.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 9,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The package weighs 3 kilograms.",
+    "pred_correction": null,
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 10,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The room temperature is 25°C.",
+    "pred_correction": null,
+    "explanation": ""
+  },
+  {
+    "id": 11,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "She started her job in 2022 and graduated from college in 2024.",
+    "pred_correction": null,
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 12,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "He got married in 2018 and met his partner in 2020.",
+    "pred_correction": null,
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 13,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The conference ended on May 10, and it began on May 12.",
+    "pred_correction": "The conference ended on May 10th and began on May 12th.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 14,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "She submitted the application on Friday and wrote it on Sunday.",
+    "pred_correction": "She submitted the application on Friday and wrote it on Sunday.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 15,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The baby was born, and learned to walk at 18 months.",
+    "pred_correction": "The baby was born, and learned to walk at 18 months.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 16,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The café is inside the mall, but it is also across the street from the mall.",
+    "pred_correction": "The café is located inside the mall, but it is also situated across the street from the mall.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 17,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The statue is to the left of the entrance, but it is also to the right of the entrance.",
+    "pred_correction": null,
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 18,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The keys are in the drawer, but they are also on the roof.",
+    "pred_correction": null,
+    "explanation": "The sentence is grammatically correct."
+  },
+  {
+    "id": 19,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The hotel is north of the river, but it is also south of the river.",
+    "pred_correction": "The hotel is north of the river, but it is also south of the river.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 20,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The bookstore is 20 miles away from the station.",
+    "pred_correction": "The bookstore is 20 miles away from the station.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 21,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "Jina texted Minho after the meeting because he forgot to bring her laptop.",
+    "pred_correction": "Jina texted Minho after the meeting because she forgot to bring her laptop.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 22,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "Emma called David when she lost his phone.",
+    "pred_correction": "Emma called David when she lost her phone.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 23,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "Sara thanked Tom because he received the award.",
+    "pred_correction": "Sara thanked Tom because he won the award.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 24,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "Kevin argued with Lucy because he forgot his wallet.",
+    "pred_correction": "Kevin argued with Lucy because he forgot his wallet.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 25,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "Mina emailed Joon after she finished her presentation.",
+    "pred_correction": "Mina sent an email to Joon after she finished her presentation.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 26,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The rock apologized for being late.",
+    "pred_correction": null,
+    "explanation": ""
+  },
+  {
+    "id": 27,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The chair decided to quit its job.",
+    "pred_correction": "The chair decided to quit its job.",
+    "explanation": "The sentence is logically correct."
+  },
+  {
+    "id": 28,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The rain signed the contract yesterday.",
+    "pred_correction": null,
+    "explanation": ""
+  },
+  {
+    "id": 29,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The idea ate a sandwich for lunch.",
+    "pred_correction": null,
+    "explanation": "The sentence is grammatically correct."
+  },
+  {
+    "id": 30,
+    "pred_has_error": false,
+    "pred_error_type": 0,
+    "pred_error_type_name": "No Error",
+    "sentence": "The student argued with the teacher.",
+    "pred_correction": null,
+    "explanation": ""
+  }
+]

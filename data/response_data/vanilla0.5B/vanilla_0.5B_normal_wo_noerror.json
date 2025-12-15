@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The team has 20 members: 12 are engineers and 10 are designers.",
+    "pred_correction": "The team has 20 members: 12 are engineers and 10 are designers.",
+    "explanation": "In this sentence, there is no clear action or agent being performed."
+  },
+  {
+    "id": 2,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The basket contains 15 apples: 9 are red and 8 are green.",
+    "pred_correction": "The basket contains 15 apples: 9 are red and 8 are green.",
+    "explanation": "In this sentence, there is no clear action or agent involved. The words 'negotiated' and 'a new salary' do not clearly indicate any human or animate action."
+  },
+  {
+    "id": 3,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "In the class of 30 students, 18 passed and 15 failed.",
+    "pred_correction": "Corrected version: 'Passed': 18, 'Failed': 15.",
+    "explanation": "In this sentence, 'passed' and 'failed' refer to different categories of students, which contradicts the total number of students."
+  },
+  {
+    "id": 4,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The recipe needs 3 cups of flour: 2 cups for the dough and 2 cups for the topping.",
+    "pred_correction": "The recipe requires 3 cups of flour: 2 cups for the dough and 2 cups for the topping.",
+    "explanation": "In this sentence, there is no clear action or agent being performed."
+  },
+  {
+    "id": 5,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The trip lasted 8 days: 5 days in Paris and 3 days in Rome.",
+    "pred_correction": "The lamp negotiated a new salary.",
+    "explanation": "The sentence incorrectly states that 'the lamp' negotiated a new salary when it was actually a lamp."
+  },
+  {
+    "id": 6,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "He is 180 kg tall.",
+    "pred_correction": "He is 180 kg tall.",
+    "explanation": "In this sentence, 'he' refers to a male person, which contradicts the statement about being 180 kg tall."
+  },
+  {
+    "id": 7,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The bottle holds 2 kilograms of water.",
+    "pred_correction": "The glass holds 2 kilograms of water.",
+    "explanation": "In this sentence, 'bottle' refers to an inanimate object, which does not perform human or animal actions."
+  },
+  {
+    "id": 8,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "She drove 60 minutes to the office.",
+    "pred_correction": "She drove 60 minutes to the office.",
+    "explanation": "In this sentence, 'she' refers to a male person, which contradicts the gender information provided."
+  },
+  {
+    "id": 9,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The package weighs 3 kilograms.",
+    "pred_correction": "The package weighs 3 kilograms.",
+    "explanation": "In this sentence, 'the' refers to an inanimate object, which does not match the pronoun used."
+  },
+  {
+    "id": 10,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The room temperature is 25°C.",
+    "pred_correction": "The room temperature is 25°C.",
+    "explanation": "In this sentence, 'the' refers to an inanimate object (a lamp), which does not match the gender or identity of the subject (the room). The correct pronoun should be 'he'."
+  },
+  {
+    "id": 11,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "She started her job in 2022 and graduated from college in 2024.",
+    "pred_correction": "She graduated from college in 2022.",
+    "explanation": "The sentence incorrectly states that she graduated from college in 2024 when she actually graduated from college in 2022."
+  },
+  {
+    "id": 12,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "He got married in 2018 and met his partner in 2020.",
+    "pred_correction": "He got married in 2018 and met his partner in 2020.",
+    "explanation": "The sentence incorrectly states that he met his partner in 2020, which contradicts the fact that he got married in 2018."
+  },
+  {
+    "id": 13,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The conference ended on May 10, and it began on May 12.",
+    "pred_correction": "The conference ended on May 10th and began on May 12th.",
+    "explanation": "The sentence does not contain any logical or semantic errors."
+  },
+  {
+    "id": 14,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "She submitted the application on Friday and wrote it on Sunday.",
+    "pred_correction": "She submitted the application on Friday and wrote it on Sunday.",
+    "explanation": "The pronoun 'she' refers to both 'he' and 'it', which is ambiguous."
+  },
+  {
+    "id": 15,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The baby was born, and learned to walk at 18 months.",
+    "pred_correction": "The baby was born, and learned to walk at 18 months.",
+    "explanation": "The sentence incorrectly uses 'baby' as both the subject and the agent."
+  },
+  {
+    "id": 16,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The café is inside the mall, but it is also across the street from the mall.",
+    "pred_correction": "The café is located outside the mall.",
+    "explanation": "The cafe is described as being inside the mall, which contradicts its description as being outside the mall."
+  },
+  {
+    "id": 17,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The statue is to the left of the entrance, but it is also to the right of the entrance.",
+    "pred_correction": "The statue is to the left of the entrance, but it is also to the right of the entrance.",
+    "explanation": "The sentence incorrectly uses 'to' instead of 'from', which is incorrect."
+  },
+  {
+    "id": 18,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The keys are in the drawer, but they are also on the roof.",
+    "pred_correction": "The keys are in the drawer, but they are also on the roof.",
+    "explanation": "There is no clear error in this sentence."
+  },
+  {
+    "id": 19,
+    "pred_error_type": 1,
+    "pred_error_type_name": "Arithmetic/Total Inconsistency",
+    "sentence": "The hotel is north of the river, but it is also south of the river.",
+    "pred_correction": "The hotel is north of the river, but it is also south of the river.",
+    "explanation": "The sentence has no logical inconsistency."
+  },
+  {
+    "id": 20,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The bookstore is 20 miles away from the station.",
+    "pred_correction": "The bookstore is 20 miles away from the station.",
+    "explanation": "The sentence incorrectly uses 'the' to refer to the book, which is incorrect as it refers to an inanimate object."
+  },
+  {
+    "id": 21,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "Jina texted Minho after the meeting because he forgot to bring her laptop.",
+    "pred_correction": "Jina texted Minho after the meeting because she forgot to bring her laptop.",
+    "explanation": "In this sentence, 'Minho' refers to a male character, while 'Jina' refers to a female character."
+  },
+  {
+    "id": 22,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "Emma called David when she lost his phone.",
+    "pred_correction": "Emma called David when she lost his phone.",
+    "explanation": "In this sentence, 'David' refers to a man who owns a phone, while 'Emma' refers to a woman who lost her phone. This creates a contradiction."
+  },
+  {
+    "id": 23,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "Sara thanked Tom because he received the award.",
+    "pred_correction": "Sara thanked her own friend because he received the award.",
+    "explanation": "In this sentence, 'Tom' refers to a male character, while 'Sara' refers to a female character. This mismatch can lead to confusion about who did what."
+  },
+  {
+    "id": 24,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "Kevin argued with Lucy because he forgot his wallet.",
+    "pred_correction": "Kevin argued with Lucy because he forgot his wallet.",
+    "explanation": "In this sentence, Kevin is arguing with Lucy about forgetting his wallet, which is an action performed by Kevin."
+  },
+  {
+    "id": 25,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "Mina emailed Joon after she finished her presentation.",
+    "pred_correction": "Mina sent an email to Joon after she finished her presentation.",
+    "explanation": "In this sentence, 'Mina' refers to a male character, while 'Joon' refers to a female character."
+  },
+  {
+    "id": 26,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The rock apologized for being late.",
+    "pred_correction": "The rock apologized for being late.",
+    "explanation": "The pronoun 'himself' refers to the subject 'the rock', which does not match the gender or identity of the person."
+  },
+  {
+    "id": 27,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The chair decided to quit its job.",
+    "pred_correction": "The chair decided to quit its position.",
+    "explanation": "In this sentence, 'chair' refers to an inanimate object, which does not perform human or animal actions."
+  },
+  {
+    "id": 28,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The rain signed the contract yesterday.",
+    "pred_correction": "The rain signed the contract yesterday.",
+    "explanation": "In this sentence, 'contract' refers to an inanimate object ('rain'), which does not perform any action."
+  },
+  {
+    "id": 29,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The idea ate a sandwich for lunch.",
+    "pred_correction": "The idea had a sandwich for lunch.",
+    "explanation": "In this sentence, 'ate' is used instead of 'had eaten', which is incorrect."
+  },
+  {
+    "id": 30,
+    "pred_error_type": 6,
+    "pred_error_type_name": "Action-Agent/Object Mismatch",
+    "sentence": "The student argued with the teacher.",
+    "pred_correction": "The student talked with the teacher.",
+    "explanation": "In this sentence, 'argued' is used as a pronoun instead of 'talked'. The correct verb form would be 'talked'."
+  }
+]

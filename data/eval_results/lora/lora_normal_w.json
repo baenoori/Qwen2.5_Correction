@@ -1,0 +1,562 @@
+{
+  "model": "lora",
+  "dataset": "normal_w",
+  "source_file": "lora_normal_w_noerror.json",
+  "metrics": {
+    "total_items": 30,
+    "type_accuracy": 0.4,
+    "detection_accuracy": 0.8333333333333334,
+    "average_qualitative_scores": {
+      "error_removal_score": 2,
+      "consistency_score": 3.533333333333333,
+      "minimality_score": 3.8
+    },
+    "bertscore": {
+      "precision": 0.9843258261680603,
+      "recall": 0.9786296486854553,
+      "f1": 0.9814136624336243
+    }
+  },
+  "items": [
+    {
+      "id": 1,
+      "sentence": "The team has 20 members: 12 are engineers and 10 are designers.",
+      "ground_truth_error_type": "Arithmetic/Total Inconsistency",
+      "ground_truth_error_type_id": 1,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The team has 23 members: 12 are engineers and 10 are designers.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 2,
+        "consistency_score": 2,
+        "minimality_score": 3
+      },
+      "judge_reasoning": "The AI attempted to fix the arithmetic inconsistency by changing the total number of team members to 23, but did not update the individual counts of engineers and designers, which still sum to 22. This creates a clear contradiction between the total and the parts, so the error is only partially fixed (score 2). The inconsistency across the text lowers the consistency score to 2. The AI only changed the total number in the same sentence and did not alter other parts, so minimality is good but not perfect, scoring 3."
+    },
+    {
+      "id": 2,
+      "sentence": "The basket contains 15 apples: 9 are red and 8 are green.",
+      "ground_truth_error_type": "Arithmetic/Total Inconsistency",
+      "ground_truth_error_type_id": 1,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The basket contains 17 apples: 9 are red and 8 are green.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 3
+      },
+      "judge_reasoning": "The original error was that the total number of apples (15) did not match the sum of red and green apples (9 + 8 = 17). The AI corrected the total to 17, which perfectly aligns with the sum of the parts, fully removing the arithmetic inconsistency. The correction is minimal and only changes the total number, but since the AI slightly rephrased the sentence by changing 'contains 15 apples' to 'contains 17 apples' without altering other parts, minimality is rated 3 rather than 4. There are no new contradictions or errors introduced, so consistency is perfect."
+    },
+    {
+      "id": 3,
+      "sentence": "In the class of 30 students, 18 passed and 15 failed.",
+      "ground_truth_error_type": "Arithmetic/Total Inconsistency",
+      "ground_truth_error_type_id": 1,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "In the class of 31 students, 18 passed and 15 failed.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 1,
+        "consistency_score": 2,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI attempted to fix the total number of students from 30 to 31 but did not adjust the numbers of passed or failed students accordingly. Since 18 + 15 = 33, which exceeds the total of 31, the arithmetic inconsistency remains. This is a weak attempt to fix the error, so error_removal_score is 1. The inconsistency between total and sum of parts causes a logical contradiction, so consistency_score is 2. The AI only changed the total number in the same sentence and did not alter other parts, so minimality_score is 4."
+    },
+    {
+      "id": 4,
+      "sentence": "The recipe needs 3 cups of flour: 2 cups for the dough and 2 cups for the topping.",
+      "ground_truth_error_type": "Arithmetic/Total Inconsistency",
+      "ground_truth_error_type_id": 1,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The recipe needs 5 cups of flour: 2 cups for the dough and 3 cups for the topping.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The original error was that the total flour amount (3 cups) did not match the sum of the parts (2 + 2 = 4 cups). The AI corrected the total to 5 cups and adjusted the topping amount to 3 cups, making the sum consistent (2 + 3 = 5). There are no contradictions or inconsistencies in the corrected text. The AI only changed the necessary numbers to fix the arithmetic inconsistency without altering other parts of the sentence. Therefore, all scores are perfect."
+    },
+    {
+      "id": 5,
+      "sentence": "The trip lasted 8 days: 5 days in Paris and 3 days in Rome.",
+      "ground_truth_error_type": "Arithmetic/Total Inconsistency",
+      "ground_truth_error_type_id": 1,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The trip lasted 8 days: 5 days in Paris and 3 days in Rome.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The original text contained no arithmetic inconsistency since 5 + 3 equals the total of 8 days. The AI's corrected text is identical to the original, meaning the error was effectively not present and thus 'removed' by default. There are no contradictions or unnecessary changes. Therefore, all scores are perfect."
+    },
+    {
+      "id": 6,
+      "sentence": "He is 180 kg tall.",
+      "ground_truth_error_type": "Unit/Measurement Mismatch",
+      "ground_truth_error_type_id": 2,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": null,
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI failed to fix the unit/measurement mismatch error; the sentence still incorrectly uses 'kg' to describe height. Since no changes were made, the error remains fully present, resulting in an error_removal_score of 0. There are no contradictions or inconsistencies introduced, so consistency_score is 4. Minimality_score is 4 because the AI made no changes, thus only the necessary parts (none) were modified."
+    },
+    {
+      "id": 7,
+      "sentence": "The bottle holds 2 kilograms of water.",
+      "ground_truth_error_type": "Unit/Measurement Mismatch",
+      "ground_truth_error_type_id": 2,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The bottle holds 2 kilograms of water.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI's corrected text is identical to the original and does not address the specified error type (Unit/Measurement Mismatch). Therefore, the error removal score is 0. Since no changes were made, there are no new contradictions or inconsistencies, so the consistency score is 4. The minimality score is also 4 because no unnecessary changes were made."
+    },
+    {
+      "id": 8,
+      "sentence": "She drove 60 minutes to the office.",
+      "ground_truth_error_type": "Unit/Measurement Mismatch",
+      "ground_truth_error_type_id": 2,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": null,
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI did not correct the unit/measurement mismatch error as the text remains unchanged. Therefore, the error_removal_score is 0. Since the text is a single sentence and unchanged, there are no contradictions or inconsistencies, so consistency_score is 4. The AI made no changes, so minimality_score is 4."
+    },
+    {
+      "id": 9,
+      "sentence": "The package weighs 3 kilograms.",
+      "ground_truth_error_type": "Unit/Measurement Mismatch",
+      "ground_truth_error_type_id": 2,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The package weighs 3 kilograms.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI's correction did not change the text at all, so the original unit/measurement mismatch error remains uncorrected, resulting in an error_removal_score of 0. Since the text is a single sentence and unchanged, there are no new contradictions or inconsistencies, so the consistency_score is 4. The minimality_score is also 4 because no unnecessary changes were made. Overall, the AI failed to fix the specified error but preserved the original text perfectly."
+    },
+    {
+      "id": 10,
+      "sentence": "The room temperature is 25°C.",
+      "ground_truth_error_type": "Unit/Measurement Mismatch",
+      "ground_truth_error_type_id": 2,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": null,
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI's correction did not change the text at all, leaving the original unit/measurement mismatch error unaddressed, resulting in an error_removal_score of 0. Since the text is unchanged and contains only one sentence, there are no internal contradictions, so the consistency_score is 4. The minimality_score is also 4 because no unnecessary changes were made. Overall, the AI failed to fix the specified error but maintained perfect consistency and minimality."
+    },
+    {
+      "id": 11,
+      "sentence": "She started her job in 2022 and graduated from college in 2024.",
+      "ground_truth_error_type": "Temporal Order/Duration Inconsistency",
+      "ground_truth_error_type_id": 3,
+      "pred_error_type": "Temporal Order/Duration Inconsistency",
+      "pred_error_type_id": 3,
+      "pred_has_error": true,
+      "pred_correction": "She started her job in 2022 and graduated from college in 2024.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI did not fix the temporal inconsistency; the original error remains fully present. However, the text is internally consistent as no contradictions or new errors were introduced. Since the AI made no changes, minimality is perfect. Therefore, error_removal_score is 0, consistency_score is 4, and minimality_score is 4."
+    },
+    {
+      "id": 12,
+      "sentence": "He got married in 2018 and met his partner in 2020.",
+      "ground_truth_error_type": "Temporal Order/Duration Inconsistency",
+      "ground_truth_error_type_id": 3,
+      "pred_error_type": "Temporal Order/Duration Inconsistency",
+      "pred_error_type_id": 3,
+      "pred_has_error": true,
+      "pred_correction": "He met his partner in 2018 and got married in 2018.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI fully corrected the temporal inconsistency by reversing the order and aligning the years so that meeting precedes marriage, both in 2018. There are no contradictions or inconsistencies introduced. The correction was minimal, only changing the order and year in the same sentence without altering any other text (since none exists). Therefore, all scores are perfect."
+    },
+    {
+      "id": 13,
+      "sentence": "The conference ended on May 10, and it began on May 12.",
+      "ground_truth_error_type": "Temporal Order/Duration Inconsistency",
+      "ground_truth_error_type_id": 3,
+      "pred_error_type": "Temporal Order/Duration Inconsistency",
+      "pred_error_type_id": 3,
+      "pred_has_error": true,
+      "pred_correction": "The conference began on May 10 and ended on May 12.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI perfectly fixed the temporal inconsistency by reversing the dates to a logical order without introducing any contradictions. The correction is minimal, only changing the order of the two dates and the verbs 'began' and 'ended' accordingly. The rest of the sentence remains untouched and consistent. Therefore, all scores are at the highest level."
+    },
+    {
+      "id": 14,
+      "sentence": "She submitted the application on Friday and wrote it on Sunday.",
+      "ground_truth_error_type": "Temporal Order/Duration Inconsistency",
+      "ground_truth_error_type_id": 3,
+      "pred_error_type": "Temporal Order/Duration Inconsistency",
+      "pred_error_type_id": 3,
+      "pred_has_error": true,
+      "pred_correction": "She wrote the application on Friday and submitted it on Sunday.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI perfectly fixed the temporal inconsistency by swapping the actions to a logical order without introducing any contradictions or unnecessary changes. Since the text is a single sentence, the correction is minimal and fully resolves the error."
+    },
+    {
+      "id": 15,
+      "sentence": "The baby was born, and learned to walk at 18 months.",
+      "ground_truth_error_type": "Temporal Order/Duration Inconsistency",
+      "ground_truth_error_type_id": 3,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The baby was born, and learned to walk at 18 months.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI did not make any correction to the original text, leaving the temporal order/duration inconsistency unaddressed. Since the ground truth error is a temporal inconsistency and the AI's correction is identical to the original, the error remains fully present, resulting in an error_removal_score of 0. There are no contradictions or inconsistencies introduced, so the consistency_score is 4. The AI made no changes, so minimality_score is 4. Overall, the AI failed to fix the specified error."
+    },
+    {
+      "id": 16,
+      "sentence": "The café is inside the mall, but it is also across the street from the mall.",
+      "ground_truth_error_type": "Spatial Relation Inconsistency",
+      "ground_truth_error_type_id": 4,
+      "pred_error_type": "Spatial Relation Inconsistency",
+      "pred_error_type_id": 4,
+      "pred_has_error": true,
+      "pred_correction": "The café is inside the mall.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI completely removed the contradictory spatial relation by eliminating the conflicting phrase 'but it is also across the street from the mall.' The correction is logically consistent with no contradictions in the text. The change was minimal, affecting only the part necessary to fix the error without altering other valid content. Therefore, all scores are at the highest level."
+    },
+    {
+      "id": 17,
+      "sentence": "The statue is to the left of the entrance, but it is also to the right of the entrance.",
+      "ground_truth_error_type": "Spatial Relation Inconsistency",
+      "ground_truth_error_type_id": 4,
+      "pred_error_type": "Spatial Relation Inconsistency",
+      "pred_error_type_id": 4,
+      "pred_has_error": true,
+      "pred_correction": "The statue is to the left of the entrance, but it is also to the right of the entrance.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 0,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI failed to fix the spatial relation inconsistency; the contradictory statement remains unchanged. Therefore, the error removal score is 0. Since the text is unchanged, no new contradictions or errors are introduced, but the original contradiction remains, so consistency score is 0. The AI made no changes, so minimality score is 4."
+    },
+    {
+      "id": 18,
+      "sentence": "The keys are in the drawer, but they are also on the roof.",
+      "ground_truth_error_type": "Spatial Relation Inconsistency",
+      "ground_truth_error_type_id": 4,
+      "pred_error_type": "Temporal Order/Duration Inconsistency",
+      "pred_error_type_id": 3,
+      "pred_has_error": true,
+      "pred_correction": "They are on the roof.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI completely removed the spatial inconsistency by eliminating the contradictory location 'in the drawer' and retaining only 'on the roof.' Since the original error was spatial relation inconsistency, and the AI's detected error type was temporal (incorrectly), the correction still fully addresses the actual error. There are no other sentences to cause contradictions, so consistency is perfect. The AI made minimal changes, only removing the conflicting phrase, so minimality is perfect."
+    },
+    {
+      "id": 19,
+      "sentence": "The hotel is north of the river, but it is also south of the river.",
+      "ground_truth_error_type": "Spatial Relation Inconsistency",
+      "ground_truth_error_type_id": 4,
+      "pred_error_type": "Temporal Order/Duration Inconsistency",
+      "pred_error_type_id": 3,
+      "pred_has_error": true,
+      "pred_correction": "The hotel is north of the river.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The original error was a spatial relation inconsistency claiming the hotel is both north and south of the river. The AI's correction removes the contradictory part, leaving a single consistent spatial relation. Since the correction fully removes the error without introducing any new contradictions or unnecessary changes, and only modifies the necessary part of the sentence, all scores are perfect."
+    },
+    {
+      "id": 20,
+      "sentence": "The bookstore is 20 miles away from the station.",
+      "ground_truth_error_type": "Spatial Relation Inconsistency",
+      "ground_truth_error_type_id": 4,
+      "pred_error_type": "Unit/Measurement Mismatch",
+      "pred_error_type_id": 2,
+      "pred_has_error": true,
+      "pred_correction": "The bookstore is 20 kilometers away from the station.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 3,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The original error was a spatial relation inconsistency, but the AI detected it as a unit/measurement mismatch and changed 'miles' to 'kilometers'. This removes the original unit but does not address whether the spatial relation is consistent with any external context (which is not provided). Since the text is a single sentence, no internal contradictions arise. The correction is minimal and only changes the unit, so minimality is perfect. However, because the ground truth error is spatial relation inconsistency and the AI only changed the unit without clarifying or verifying the spatial relation, the error removal is good but not perfect, hence a score of 3."
+    },
+    {
+      "id": 21,
+      "sentence": "Jina texted Minho after the meeting because he forgot to bring her laptop.",
+      "ground_truth_error_type": "Pronoun/Referent Ambiguity",
+      "ground_truth_error_type_id": 5,
+      "pred_error_type": "Unit/Measurement Mismatch",
+      "pred_error_type_id": 2,
+      "pred_has_error": true,
+      "pred_correction": "He is 165 cm tall.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 0,
+        "minimality_score": 0
+      },
+      "judge_reasoning": "The AI's correction completely ignores the original sentence and error type. Instead of fixing the pronoun ambiguity, it outputs an unrelated sentence about height. This fails to remove the original error, introduces a nonsensical and disconnected statement, and rewrites the entire text unnecessarily. Therefore, all scores are zero."
+    },
+    {
+      "id": 22,
+      "sentence": "Emma called David when she lost his phone.",
+      "ground_truth_error_type": "Pronoun/Referent Ambiguity",
+      "ground_truth_error_type_id": 5,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "Emma called David when she lost her phone.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The original error was a pronoun/referent ambiguity where 'his phone' incorrectly suggested the phone belonged to David, causing confusion. The AI corrected this by changing 'his' to 'her,' which completely removes the ambiguity. Since the correction is minimal and only changes the necessary pronoun without affecting any other part of the sentence or text, the minimality score is perfect. There are no contradictions or inconsistencies introduced, so the consistency score is also perfect. The error removal is flawless as the ambiguity is fully resolved."
+    },
+    {
+      "id": 23,
+      "sentence": "Sara thanked Tom because he received the award.",
+      "ground_truth_error_type": "Pronoun/Referent Ambiguity",
+      "ground_truth_error_type_id": 5,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "Sara thanked Tom because he received the award.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI did not fix the pronoun/referent ambiguity error at all, leaving the sentence unchanged and ambiguous. Therefore, the error_removal_score is 0. Since no new contradictions or errors were introduced, the consistency_score is 4. The AI made no changes, so the minimality_score is 4. Overall, the correction failed to address the specified error."
+    },
+    {
+      "id": 24,
+      "sentence": "Kevin argued with Lucy because he forgot his wallet.",
+      "ground_truth_error_type": "Pronoun/Referent Ambiguity",
+      "ground_truth_error_type_id": 5,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "Kevin argued with Lucy because he forgot his wallet.",
+      "type_correct": false,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI did not address the pronoun/referent ambiguity error at all, leaving the sentence unchanged. Therefore, the error removal score is 0. Since the text is a single sentence with no numerical or logical contradictions introduced, the consistency score is 4. The AI made no changes, so the minimality score is 4. Overall, the correction failed to fix the specified error."
+    },
+    {
+      "id": 25,
+      "sentence": "Mina emailed Joon after she finished her presentation.",
+      "ground_truth_error_type": "Pronoun/Referent Ambiguity",
+      "ground_truth_error_type_id": 5,
+      "pred_error_type": "Pronoun/Referent Ambiguity",
+      "pred_error_type_id": 5,
+      "pred_has_error": true,
+      "pred_correction": "Mina emailed Joon after she finished her presentation.",
+      "type_correct": true,
+      "detection_correct": true,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI did not fix the pronoun ambiguity at all, leaving the sentence exactly as it was. Therefore, the error removal score is 0. Since there is only one sentence and no contradictions or inconsistencies introduced, the consistency score is 4. The AI made no changes, so the minimality score is 4. Overall, the correction failed to address the specified error."
+    },
+    {
+      "id": 26,
+      "sentence": "The rock apologized for being late.",
+      "ground_truth_error_type": "Unknown",
+      "ground_truth_error_type_id": 0,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The rock apologized for being late.",
+      "type_correct": false,
+      "detection_correct": false,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "Since the original text contains no arithmetic or total inconsistency errors, and the AI's corrected text is identical to the original, the correction is trivially flawless. There are no contradictions or inconsistencies to address, and no unnecessary changes were made. Therefore, all scores are perfect."
+    },
+    {
+      "id": 27,
+      "sentence": "The chair decided to quit its job.",
+      "ground_truth_error_type": "Unknown",
+      "ground_truth_error_type_id": 0,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The director decided to quit its job.",
+      "type_correct": false,
+      "detection_correct": false,
+      "qualitative_scores": {
+        "error_removal_score": 2,
+        "consistency_score": 2,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "Since the ground truth error type is 'Unknown' and the AI detected an 'Arithmetic/Total Inconsistency' which is irrelevant here, the correction does not address any specific error. The AI changed 'chair' to 'director' but kept the pronoun 'its', which is inconsistent because 'director' is typically a person and should use 'his' or 'her'. This creates a pronoun inconsistency. There are no arithmetic or total inconsistencies to evaluate. The correction is minimal, only changing 'chair' to 'director'. Therefore, error removal is partial (2) because the original error is unknown and the correction does not fully fix pronoun agreement. Consistency is rated 2 due to the pronoun mismatch. Minimality is 4 as only the necessary word was changed."
+    },
+    {
+      "id": 28,
+      "sentence": "The rain signed the contract yesterday.",
+      "ground_truth_error_type": "Unknown",
+      "ground_truth_error_type_id": 0,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The rain signed the contract yesterday.",
+      "type_correct": false,
+      "detection_correct": false,
+      "qualitative_scores": {
+        "error_removal_score": 0,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "The AI did not correct the original semantic error ('The rain signed the contract yesterday.'), which is nonsensical. Since the ground truth error type is 'Unknown' and the AI detected an unrelated error type (Arithmetic/Total Inconsistency) that does not apply, no correction was made. There are no internal contradictions or inconsistencies, so consistency is perfect. The AI made no changes, so minimality is perfect. However, the error remains uncorrected, so error removal score is 0."
+    },
+    {
+      "id": 29,
+      "sentence": "The idea ate a sandwich for lunch.",
+      "ground_truth_error_type": "Unknown",
+      "ground_truth_error_type_id": 0,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The idea ate a sandwich for lunch.",
+      "type_correct": false,
+      "detection_correct": false,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "Since the ground truth error type is 'Unknown' and the AI detected an 'Arithmetic/Total Inconsistency' which does not exist in the original text, the AI made no changes. The original sentence is grammatically odd but contains no arithmetic or total inconsistency errors. The AI's corrected text is identical, so the error removal is perfect (no error to remove), consistency is perfect (no contradictions), and minimality is perfect (no unnecessary changes)."
+    },
+    {
+      "id": 30,
+      "sentence": "The student argued with the teacher.",
+      "ground_truth_error_type": "Unknown",
+      "ground_truth_error_type_id": 0,
+      "pred_error_type": "Arithmetic/Total Inconsistency",
+      "pred_error_type_id": 1,
+      "pred_has_error": true,
+      "pred_correction": "The student argued with the teacher.",
+      "type_correct": false,
+      "detection_correct": false,
+      "qualitative_scores": {
+        "error_removal_score": 4,
+        "consistency_score": 4,
+        "minimality_score": 4
+      },
+      "judge_reasoning": "Since the original text contains no arithmetic or total inconsistency errors, and the AI's corrected text is identical and unchanged, the error removal is perfect by default. There are no contradictions or inconsistencies in the text, and no unnecessary changes were made. Therefore, all scores are at the highest level."
+    }
+  ]
+}
