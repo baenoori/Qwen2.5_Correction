@@ -1,103 +1,3 @@
-# Qwen2.5_Correction Project Structure
-
-```
-Qwen2.5_Correction/
-├── data/
-│   ├── org_data/                          # 평가 데이터 (정답)
-│   │   ├── eval_normal_data.json          # Normal 평가 데이터 (30개, 단일 에러)
-│   │   ├── eval_long_data.json            # Long 평가 데이터 (12개, 단일 에러)
-│   │   └── eval_hard_data.json            # Hard 평가 데이터 (12개, 2개 에러)
-│   │
-│   ├── response_data/                     # 모델 예측 결과
-│   │   ├── vanilla0.5B/                   # Vanilla 0.5B 결과
-│   │   │   ├── vanilla_0.5B_normal_w_noerror.json
-│   │   │   ├── vanilla_0.5B_normal_wo_noerror.json
-│   │   │   ├── vanilla_0.5B_long_w_noerror.json
-│   │   │   ├── vanilla_0.5B_long_wo_noerror.json
-│   │   │   ├── vanilla_0.5B_hard_w_noerror.json
-│   │   │   └── vanilla_0.5B_hard_wo_noerror.json
-│   │   │
-│   │   ├── vanilla7B/                     # Vanilla 7B 결과
-│   │   │   ├── vanilla_7B_normal_w_noerror.json
-│   │   │   ├── vanilla_7B_normal_wo_noerror.json
-│   │   │   ├── vanilla_7B_long_w_noerror.json
-│   │   │   ├── vanilla_7B_long_wo_noerror.json
-│   │   │   ├── vanilla_7B_hard_w_noerror.json
-│   │   │   └── vanilla_7B_hard_wo_noerror.json
-│   │   │
-│   │   └── lora/                          # LoRA 0.5B 결과
-│   │       ├── lora_normal_w_noerror.json
-│   │       ├── lora_normal_wo_noerror.json
-│   │       ├── lora_long_w_noerror.json
-│   │       ├── lora_long_wo_noerror.json
-│   │       ├── lora_hard_w_noerror.json
-│   │       └── lora_hard_wo_noerror.json
-│   │
-│   ├── train_data/
-│   │   └── train_dataset.json             # LoRA 학습 데이터 (50개)
-│   │
-│   └── eval_results/                      # 평가 결과 (type/detection acc, 정성 점수, BERTScore)
-│       ├── vanilla0.5B/
-│       │   ├── vanilla_0.5B_normal_w.json
-│       │   ├── vanilla_0.5B_normal_wo.json
-│       │   ├── vanilla_0.5B_long_w.json
-│       │   ├── vanilla_0.5B_long_wo.json
-│       │   ├── vanilla_0.5B_hard_w.json
-│       │   └── vanilla_0.5B_hard_wo.json
-│       ├── vanilla7B/
-│       │   ├── vanilla_7B_normal_w.json
-│       │   ├── vanilla_7B_normal_wo.json
-│       │   ├── vanilla_7B_long_w.json
-│       │   ├── vanilla_7B_long_wo.json
-│       │   ├── vanilla_7B_hard_w.json
-│       │   └── vanilla_7B_hard_wo.json
-│       └── lora/
-│           ├── lora_normal_w.json
-│           ├── lora_normal_wo.json
-│           ├── lora_long_w.json
-│           ├── lora_long_wo.json
-│           ├── lora_hard_w.json
-│           └── lora_hard_wo.json
-│
-├── evaluation/
-│   └── scripts/                           # 평가 스크립트
-│       ├── evaluate_normal.py             # normal/long (w/wo) response_data → data/eval_results/<model>/normal_*.json, long_*.json
-│       └── evaluate_hard.py               # hard (w/wo) response_data → data/eval_results/<model>/hard_*.json
-│
-├── lora_Qwen2.5/
-│   ├── merged_model/                      # LoRA 학습 후 병합된 모델
-│   │   ├── config.json
-│   │   ├── generation_config.json
-│   │   ├── model.safetensors
-│   │   ├── tokenizer.json
-│   │   ├── tokenizer_config.json
-│   │   ├── vocab.json
-│   │   ├── special_tokens_map.json
-│   │   └── added_tokens.json
-│   │
-│   ├── checkpoints/                       # 학습 체크포인트
-│   │   ├── checkpoint-50/
-│   │   ├── checkpoint-100/
-│   │   ├── checkpoint-150/
-│   │   └── checkpoint-175/
-│   │
-│   └── scripts/
-│       ├── LoRA_train.py                  # LoRA 학습 스크립트
-│       ├── LoRA_org_w_noerror.py          # Normal/Long 평가 (w/ No Error)
-│       ├── LoRA_org_w.o_noerror.py        # Normal/Long 평가 (w/o No Error)
-│       ├── LoRA_hard_w_noerror.py         # Hard 평가 (w/ No Error)
-│       └── LoRA_hard_w.o_noerror.py       # Hard 평가 (w/o No Error)
-│
-├── vanilla/
-│   └── scripts/
-│       ├── Qwen2.5_org_w_noerror.py       # Normal/Long 평가 (w/ No Error)
-│       ├── Qwen2.5_org_w.o_noerror.py     # Normal/Long 평가 (w/o No Error)
-│       ├── Qwen2.5_hard_w_noerror.py      # Hard 평가 (w/ No Error)
-│       └── Qwen2.5_hard_wo_noerror.py     # Hard 평가 (w/o No Error)
-│
-└── project_structure.md                   # 프로젝트 구조 문서
-```
-
 ## 파일 설명
 
 ### 평가 데이터 (org_data)
@@ -270,3 +170,103 @@ T5(대명사), T6(무생물 행동) 에러 탐지가 전반적으로 약함
 | Vanilla 0.5B | 0.995 | 0.978 | 0.990 | 0.949 | - | 0.929 |
 | Vanilla 7B | 0.966 | 0.976 | 0.924 | 0.964 | 0.981 | 0.988 |
 | LoRA 0.5B | 0.981 | 0.980 | 0.926 | 0.955 | 0.998 | 0.954 |
+
+# Qwen2.5_Correction Project Structure
+
+```
+Qwen2.5_Correction/
+├── data/
+│   ├── org_data/                          # 평가 데이터 (정답)
+│   │   ├── eval_normal_data.json          # Normal 평가 데이터 (30개, 단일 에러)
+│   │   ├── eval_long_data.json            # Long 평가 데이터 (12개, 단일 에러)
+│   │   └── eval_hard_data.json            # Hard 평가 데이터 (12개, 2개 에러)
+│   │
+│   ├── response_data/                     # 모델 예측 결과
+│   │   ├── vanilla0.5B/                   # Vanilla 0.5B 결과
+│   │   │   ├── vanilla_0.5B_normal_w_noerror.json
+│   │   │   ├── vanilla_0.5B_normal_wo_noerror.json
+│   │   │   ├── vanilla_0.5B_long_w_noerror.json
+│   │   │   ├── vanilla_0.5B_long_wo_noerror.json
+│   │   │   ├── vanilla_0.5B_hard_w_noerror.json
+│   │   │   └── vanilla_0.5B_hard_wo_noerror.json
+│   │   │
+│   │   ├── vanilla7B/                     # Vanilla 7B 결과
+│   │   │   ├── vanilla_7B_normal_w_noerror.json
+│   │   │   ├── vanilla_7B_normal_wo_noerror.json
+│   │   │   ├── vanilla_7B_long_w_noerror.json
+│   │   │   ├── vanilla_7B_long_wo_noerror.json
+│   │   │   ├── vanilla_7B_hard_w_noerror.json
+│   │   │   └── vanilla_7B_hard_wo_noerror.json
+│   │   │
+│   │   └── lora/                          # LoRA 0.5B 결과
+│   │       ├── lora_normal_w_noerror.json
+│   │       ├── lora_normal_wo_noerror.json
+│   │       ├── lora_long_w_noerror.json
+│   │       ├── lora_long_wo_noerror.json
+│   │       ├── lora_hard_w_noerror.json
+│   │       └── lora_hard_wo_noerror.json
+│   │
+│   ├── train_data/
+│   │   └── train_dataset.json             # LoRA 학습 데이터 (50개)
+│   │
+│   └── eval_results/                      # 평가 결과 (type/detection acc, 정성 점수, BERTScore)
+│       ├── vanilla0.5B/
+│       │   ├── vanilla_0.5B_normal_w.json
+│       │   ├── vanilla_0.5B_normal_wo.json
+│       │   ├── vanilla_0.5B_long_w.json
+│       │   ├── vanilla_0.5B_long_wo.json
+│       │   ├── vanilla_0.5B_hard_w.json
+│       │   └── vanilla_0.5B_hard_wo.json
+│       ├── vanilla7B/
+│       │   ├── vanilla_7B_normal_w.json
+│       │   ├── vanilla_7B_normal_wo.json
+│       │   ├── vanilla_7B_long_w.json
+│       │   ├── vanilla_7B_long_wo.json
+│       │   ├── vanilla_7B_hard_w.json
+│       │   └── vanilla_7B_hard_wo.json
+│       └── lora/
+│           ├── lora_normal_w.json
+│           ├── lora_normal_wo.json
+│           ├── lora_long_w.json
+│           ├── lora_long_wo.json
+│           ├── lora_hard_w.json
+│           └── lora_hard_wo.json
+│
+├── evaluation/
+│   └── scripts/                           # 평가 스크립트
+│       ├── evaluate_normal.py             # normal/long (w/wo) response_data → data/eval_results/<model>/normal_*.json, long_*.json
+│       └── evaluate_hard.py               # hard (w/wo) response_data → data/eval_results/<model>/hard_*.json
+│
+├── lora_Qwen2.5/
+│   ├── merged_model/                      # LoRA 학습 후 병합된 모델
+│   │   ├── config.json
+│   │   ├── generation_config.json
+│   │   ├── model.safetensors
+│   │   ├── tokenizer.json
+│   │   ├── tokenizer_config.json
+│   │   ├── vocab.json
+│   │   ├── special_tokens_map.json
+│   │   └── added_tokens.json
+│   │
+│   ├── checkpoints/                       # 학습 체크포인트
+│   │   ├── checkpoint-50/
+│   │   ├── checkpoint-100/
+│   │   ├── checkpoint-150/
+│   │   └── checkpoint-175/
+│   │
+│   └── scripts/
+│       ├── LoRA_train.py                  # LoRA 학습 스크립트
+│       ├── LoRA_org_w_noerror.py          # Normal/Long 평가 (w/ No Error)
+│       ├── LoRA_org_w.o_noerror.py        # Normal/Long 평가 (w/o No Error)
+│       ├── LoRA_hard_w_noerror.py         # Hard 평가 (w/ No Error)
+│       └── LoRA_hard_w.o_noerror.py       # Hard 평가 (w/o No Error)
+│
+├── vanilla/
+│   └── scripts/
+│       ├── Qwen2.5_org_w_noerror.py       # Normal/Long 평가 (w/ No Error)
+│       ├── Qwen2.5_org_w.o_noerror.py     # Normal/Long 평가 (w/o No Error)
+│       ├── Qwen2.5_hard_w_noerror.py      # Hard 평가 (w/ No Error)
+│       └── Qwen2.5_hard_wo_noerror.py     # Hard 평가 (w/o No Error)
+│
+└── project_structure.md                   # 프로젝트 구조 문서
+```
