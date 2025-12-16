@@ -234,8 +234,8 @@ Qwen2.5_Correction/
 │
 ├── evaluation/
 │   └── scripts/                           # 평가 스크립트
-│       ├── evaluate_normal.py             # normal/long (w/wo) response_data → data/eval_results/<model>/normal_*.json, long_*.json
-│       └── evaluate_hard.py               # hard (w/wo) response_data → data/eval_results/<model>/hard_*.json
+│       ├── evaluate_normal.py             # normal/long (w/wo) evaluation (type/detection acc, LLMasJudge, BERTScore)
+│       └── evaluate_hard.py               # hard (w/wo) evaluation (type/detection acc, LLMasJudge, BERTScore)
 │
 ├── lora_Qwen2.5/
 │   ├── merged_model/                      # LoRA 학습 후 병합된 모델
